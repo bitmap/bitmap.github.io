@@ -1,0 +1,38 @@
+.grid (
+	@columnSpan: 1,
+	@columnOffset: 0,
+	@columnWidth: 6.3333%,
+	@gutterWidth:  2%
+	) {
+ 	margin-left: (@columnWidth * @columnOffset) + (@gutterWidth * (@columnOffset - 1)) + (@gutterWidth * 2);
+  	width: (@columnWidth * @columnSpan) + (@gutterWidth * (@columnSpan - 1));
+	float: left;
+}
+.transition-scroll (
+	@speed: 2s, 
+	@easing: ease
+	) {
+-webkit-transition: all 1300ms cubic-bezier(0.520, 0, 0.270, 0.660); /* older webkit */
+-webkit-transition: all 1300ms cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+   -moz-transition: all 1300ms cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+    -ms-transition: all 1300ms cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+     -o-transition: all 1300ms cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+        transition: all 1300ms cubic-bezier(0.520, -0.230, 0.270, 0.660); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.520, 0, 0.270, 0.660); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+   -moz-transition-timing-function: cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+    -ms-transition-timing-function: cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+     -o-transition-timing-function: cubic-bezier(0.520, -0.230, 0.270, 0.660); 
+        transition-timing-function: cubic-bezier(0.520, -0.230, 0.270, 0.660); /* custom */
+}
+.transition (
+	@speed: 1200ms, 
+	@easing: ease
+	) {
+		-webkit-transition: all @speed @easing;
+		-moz-transition: all @speed @easing;
+		-o-transition: all @speed @easing;
+		-ms-transition: all @speed @easing;
+		transition: all @speed @easing;
+}
