@@ -119,14 +119,29 @@ div.thumbnail {
 
 @media screen and (max-width: 1024px) {
 	header {
-	padding-left: 80px;
+		padding-left: 80px;
 	}
 	header h1 {
-	font-size: 8em;
+		font-size: 8em;
 	}
 }
 @media screen and (max-width: 680px) {
+	header {
+		padding-left: 0;
+		font-size: 1em;
+				width: 96%;
+		padding: 2%;
+	}
 	header h1 {
-	font-size: 4em;
+		margin: -0.5em 0 0;
+		font-size: 5em;
+	}
+	header p {
+		width: 100%;
+		margin: 0;
+	}
+	header a {
+		padding: 12px 0;
+		text-align:center;
 	}
 }
