@@ -1,5 +1,6 @@
 body {
-	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-family: 'Playfair Display SC', serif;
+	text-transform: uppercase;
 	color: #0f0f0f;
 	background: white;
 	margin: 0 auto;
@@ -11,9 +12,9 @@ a {
 	font-weight: bold;
 }
 header {
-	font-family: 'Playfair Display SC', serif;
 	font-size: 2em;
 	font-weight: 900;
+	text-transform: uppercase;
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -51,14 +52,11 @@ header p {
 	color: rgba(17, 17, 17, 0.8);
 }
 header a {
-	display: block;
-	float:left;
-	clear:both;
-	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	-webkit-transition: color 0.2s ease;
+	transition: color 0.2s ease;
 }
-header a:hover {
-	margin-left: 10px;
+header a:hover { 
+	color: black;
 }
 header.in-background {
 	background-position: center center;
@@ -99,6 +97,28 @@ header.in-background {
 	width: 98%;
 }
 
+#portfolio h1 {
+	float: left;
+	width: 98%;
+	border-bottom: 1px solid #CCC;
+	padding: 1% 2%;
+	margin: 0 0 2%;
+}
+#contact {
+	height: 0;
+	overflow:hidden;
+	opacity: 0;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+#contact.in-focus {
+	height: 100px;
+	opacity: 1;
+}
+#contact a {
+	font-size: 0.5em;
+	padding: 1em;
+}
 .thumbnail {
 	display: block; 
 	float: left;
@@ -109,8 +129,27 @@ header.in-background {
 	background-repeat: no-repeat;
 	background-position: center center;
 	transition: all 0.25s;
-	-webkit-transition: all 0.2s;
+	-webkit-transition: all 0.25s;
 	background-size: 150%;
+}
+
+.thumbnail:hover span {
+	opacity: 1;
+}
+
+.thumbnail span {
+	font-family: 'Playfair Display SC', serif;
+	display: block;
+	line-height: 200px;
+	color: white;
+	text-align: center;
+	font-size: 3em;
+	width: 100%;
+	opacity: 0;
+	background: rgba(0,0,0,0.3);
+	text-transform: uppercase;
+		transition: all 0.25s;
+	-webkit-transition: all 0.25s;
 }
 
 div.thumbnail {

@@ -4,9 +4,13 @@ $(document).ready(function() {
 		$(this).siblings("article").toggle();
 		return false;
 	});
-	$("nav a").click(function (e) {
+	$("#work-link").click(function (e) {
 		$("#portfolio-wrapper").addClass("in-focus");
 		$("header").addClass("in-background");
+	});
+	$("#contact-link").click(function (e) {
+		$("#contact").addClass("in-focus");
+		//$("header").addClass("in-background");
 	});
 	$("#back").click(function () {
 		$('#portfolio-wrapper').removeClass("in-focus");
