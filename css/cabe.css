@@ -1,6 +1,5 @@
 body {
 	font-family: 'Playfair Display SC', serif;
-	text-transform: uppercase;
 	color: #0f0f0f;
 	background: white;
 	margin: 0 auto;
@@ -9,7 +8,6 @@ body {
 a {
 	color: #00C;
 	text-decoration: none;
-	font-weight: bold;
 }
 header {
 	font-size: 2em;
@@ -81,7 +79,9 @@ header.in-background {
 	opacity: 0;
 }
 #portfolio-wrapper.in-focus {
+	transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
 	opacity: 1;
 	position: static;
 }
@@ -89,20 +89,28 @@ header.in-background {
 #back {
 	display: block;
 	float: left;
-	padding: 2%;
+	padding: 0 10px;
+	font-size: 7em;
+	line-height: 22px;
+	font-weight: bold;
+	color: #CCC;
+	position: absolute;
+}
+#back:hover {
+	color: black;
 }
 
+
 #portfolio {
-	float: left;
-	width: 98%;
+	width: 100%;
 }
 
 #portfolio h1 {
-	float: left;
-	width: 98%;
+	width: 100%;
 	border-bottom: 1px solid #CCC;
-	padding: 1% 2%;
+	padding: 10px 0;
 	margin: 0 0 2%;
+	text-align: center;
 }
 #contact {
 	height: 0;
@@ -115,32 +123,36 @@ header.in-background {
 	height: 100px;
 	opacity: 1;
 }
-#contact a {
+#contact a,#contact span {
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 0.5em;
-	padding: 1em;
+	padding-left: 8em;
+	color: #333;
+	clear:both;
+	display: block;
 }
 .thumbnail {
 	display: block; 
-	float: left;
-	width: 31.3333%; 
-	height: 200px;
-	max-height: 200px;
-	margin: 0 0 2% 2%;
+	width: 100%; 
+	max-width: 900px;
+	max-height: 500px;
+	margin: 0 auto 2%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	transition: all 0.25s;
 	-webkit-transition: all 0.25s;
 	background-size: 150%;
+	position: relative;
 }
 
-.thumbnail:hover span {
+.thumbnail:hover h2, .thumbnail:hover p {
 	opacity: 1;
 }
 
-.thumbnail span {
+.thumbnail h2 {
 	font-family: 'Playfair Display SC', serif;
 	display: block;
-	line-height: 200px;
+	line-height: 500px;
 	color: white;
 	text-align: center;
 	font-size: 3em;
@@ -151,16 +163,30 @@ header.in-background {
 		transition: all 0.25s;
 	-webkit-transition: all 0.25s;
 }
+.thumbnail p {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: white;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	max-width: 900px;
+	padding: 20px;
+	background: rgba(0,0,0,0.5);
+	border-top: 1px solid rgba(255,255,255, 0.1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			transition: all 0.25s;
+	-webkit-transition: all 0.25s;
 
-div.thumbnail {
-	padding: 8% 0;
-	text-align: center;
-	background: #f4f4f4;
 }
 
 #collage { background-image: url('../images/col1.jpg'); }
-#science { background-image: url('../images/sci2.jpg'); }
-#luma { background-image: url('../images/luma1.jpg');	}
+#science { background-image: url('../images/sci1.jpg'); }
+#luma { background-image: url('../images/luma2.jpg');	}
 #glitch { background-image: url('../images/glitch4.jpg'); }
 
 @media screen and (max-width: 1024px) {
@@ -179,15 +205,35 @@ div.thumbnail {
 		padding: 2%;
 	}
 	header h1 {
-		margin: -0.5em 0 0;
+		margin: -0.25em 0 0;
 		font-size: 5em;
 	}
 	header p {
 		width: 100%;
 		margin: 0;
 	}
-	header a {
-		padding: 12px 0;
-		text-align:center;
+	nav {
+	}
+	nav  a {
+		padding: 0 0;
+		font-size: 1.5em;
+	}
+	#contact a {
+		font-size: 1em;
+		padding-left: 5.7em;
+	}
+	.thumbnail {
+		height: 250px;
+		background-size: auto;
+	}
+	.thumbnail h2 {
+		line-height: 1;
+		font-size: 1.5em;
+		text-align: left;
+		padding: 0 20px;
+	}
+	.thumbnail p {
+		position: static;
+		padding: 0 20px;
 	}
 }
