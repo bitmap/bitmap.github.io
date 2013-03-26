@@ -6,18 +6,17 @@ body {
 	overflow-y: scroll;
 }
 a {
-	color: #00C;
+	color: #e157ac;
 	text-decoration: none;
 }
 header {
 	font-size: 2em;
-	font-weight: 900;
 	text-transform: uppercase;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	top: 0;
-	padding: 0 120px;
+	padding: 0 2em;
 	z-index: -5;
 	background: url("../images/cabebg.jpg") no-repeat;
 	background-position: center top;
@@ -38,25 +37,29 @@ header {
 }
 header h1 {
 	margin: -0.368em 0 0 -120px;
-	font-size: 12em;
-	
+	font-size: 10em;
 	color: rgba(255, 255, 255, 0.8);
-	margin-left: ;
+	margin: 0 ;
 	font-style: italic;
+	height: 1.1em;
 }
-header p {
-	width: 620px;
-	margin-top: -2em;
+header h2 {
+	font-size: 30px;
+	width: 96%;
+	max-width: 700px;
+	font-weight: 700;
 	color: rgba(17, 17, 17, 0.8);
 }
-header a {
-	-webkit-transition: color 0.2s ease;
-	transition: color 0.2s ease;
+header p {
+	font-family: 'georgia';
+	font-size: 20px;
+	width: 96%;
+	max-width: 700px;
+	font-weight: normal;
+	text-transform: none;
+	color: rgba(17, 17, 17, 0.8);
 }
-header a:hover { 
-	color: black;
-}
-header.in-background {
+.in-background {
 	background-position: center center;
 	opacity: 0;
 	-webkit-filter:blur(10px);-moz-filter:blur(10px);
@@ -64,21 +67,25 @@ header.in-background {
 	-moz-transform:scale(1.25);
 	transform:scale(1.25);
 }
-#portfolio-wrapper {
+nav {
+	font-size: 2em;
+	padding: 1em 2em;
+}
+#portfolio {
 	margin: 0 auto;
 	width: 100%;
 	position: fixed;
 	padding-top: 20px;
 	clear: both;
-	background: white;
 	overflow: hidden;
 	-webkit-transition: all 2s ease;
 	transition: all 2s ease;
 	transform: translate3d(0, 1440px, 0);
 	-webkit-transform: translate3d(0, 1440px, 0);
 	opacity: 0;
+	margin-top: -90px;
 }
-#portfolio-wrapper.in-focus {
+#portfolio.in-focus {
 	transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
@@ -93,43 +100,35 @@ header.in-background {
 	font-size: 7em;
 	line-height: 22px;
 	font-weight: bold;
-	color: #CCC;
+	color: #DDD;
 	position: absolute;
+	border: none;
 }
 #back:hover {
 	color: black;
 }
 
 
-#portfolio {
+#work {
 	width: 100%;
 }
 
-#portfolio h1 {
-	width: 100%;
-	border-bottom: 1px solid #CCC;
-	padding: 10px 0;
+#work h1 {
+	width: 90%;
+	border-bottom: 1px solid #DDD;
+	padding: 10px  5%;
 	margin: 0 0 2%;
-	text-align: center;
+	text-align: right;
+	text-transform: uppercase;
 }
 #contact {
-	height: 0;
-	overflow:hidden;
-	opacity: 0;
-	transition: all 1s;
-	-webkit-transition: all 1s;
+	margin-top: -1.38em;
+	margin-left: 4em;
 }
-#contact.in-focus {
-	height: 100px;
-	opacity: 1;
-}
-#contact a,#contact span {
+
+#contact a {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 0.5em;
-	padding-left: 8em;
-	color: #333;
-	clear:both;
-	display: block;
 }
 .thumbnail {
 	display: block; 
@@ -189,38 +188,51 @@ header.in-background {
 #luma { background-image: url('../images/luma2.jpg');	}
 #glitch { background-image: url('../images/glitch4.jpg'); }
 
+@media screen and (min-width: 1220px) {
+	header, nav {
+		padding-left: 4em;
+	}
+}
+
 @media screen and (max-width: 1024px) {
-	header {
-		padding-left: 80px;
+	header, nav {
+		padding-left: 1em;
 	}
 	header h1 {
 		font-size: 8em;
 	}
+	#work h1 {
+		text-align: center;
+		background: white;
+	}
 }
-@media screen and (max-width: 680px) {
+
+@media screen and (max-width: 768px) {
 	header {
-		padding-left: 0;
-		font-size: 1.5em;
-		width: 96%;
-		padding: 2%;
+		position: static;
+		background: none;
+	}
+	#portfolio {
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		opacity: 1;
+		position: static;
+		margin: 0;
+		padding: 0;
+	}
+
+	#back {display: none;}
+
+	header {
+		width: 92%;
+		padding: 4%;
 	}
 	header h1 {
-		margin: -0.25em 0 0;
-		font-size: 5em;
-	}
-	header p {
-		width: 100%;
-		margin: 0;
+		display: none;
 	}
 	nav {
-	}
-	nav  a {
-		padding: 0 0;
-		font-size: 1.5em;
-	}
-	#contact a {
-		font-size: 1em;
-		padding-left: 5.7em;
+		display: none;
 	}
 	.thumbnail {
 		height: 250px;
