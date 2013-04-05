@@ -29,9 +29,9 @@ header {
 header.in-background {
     background-position: -1920px top;
     opacity: 0;
-/*    -webkit-filter:blur(30px);
+    -webkit-filter:blur(30px);
        -moz-filter:blur(30px);
-            filter:blur(30px);*/
+            filter:blur(30px);
 }
 
 h1 {
@@ -83,7 +83,9 @@ h1 {
     padding: 0 1em;
     box-sizing: border-box;
 }
+
 figure {margin: 0}
+
 figure img {
     width: 100%;
     max-width: 660px;
@@ -91,15 +93,7 @@ figure img {
     display: none;
 }
 
-#portfolio div {
-    width: 100%;
-    max-width: 660px;
-    margin: 0 auto 4em;
-}
-
 figure img.active {display: block;}
-
-iframe .nav {display: none;}
 
 #back {
     font-size: 1.4em;
@@ -111,3 +105,10 @@ iframe .nav {display: none;}
     font-weight: bold;
     text-align: right;
 }
+
+/*Codepen*/
+/*#portfolio div {
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto 4em;
+}*/
