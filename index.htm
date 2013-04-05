@@ -1,98 +1,66 @@
-<!--
-           _            _        __      
-          | |          (_)      / _|     
-  ___ __ _| |__   ___   _ _ __ | |_ ___  
- / __/ _` | '_ \ / _ \ | | '_ \|  _/ _ \ 
-| (_| (_| | |_) |  __/_| | | | | || (_) |
- \___\__,_|_.__/ \___(_)_|_| |_|_| \___/ 
-                                         
-   &copy;2013 Caleb Branson, 444 Lyfe.
-
--->
-
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0">
-		<title>Cabe</title>
-		<link rel="icon" type="image/png" href="images/blank.png">
-		<link rel="stylesheet" href="css/cabe.css">
-		<link rel="stylesheet" href="js/shadowbox.css">
-		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:900italic,700' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<nav> 			
-			<a href="#" id="work-link">work</a> \
-			<div id="contact">
-				<a href="http://twitter.com/cabebranson">twitter</a> \
-				<a href="http://github.com/bitmap">github</a> \
-				<a href="mailto:&#99;&#97;&#108;&#101;&#98;&#46;&#98;&#114;&#97;&#110;&#115;&#111;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">email</a>
-			</div>
-		</nav>
-		<header>
-			<h1>cabe</h1>
-			<h2>Caleb Branson is a designer \ developer in Portland fucking Oregon.</h2>
-		</header>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<title>Cabe</title>
+<link rel="stylesheet" href="css/cabe.css">
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:900italic,700' rel='stylesheet' type='text/css'>
+<header id="splash">
+	<h1>cabe</h1>
+	<h2>Caleb Branson is a designer \ developer in Portland fucking Oregon.</h2>
+</header>
+<nav>
+	<a href="#" id="work-link">work</a> \
+	<div id="contact">
+		<a href="http://twitter.com/cabebranson">twitter</a> \
+		<a href="http://github.com/bitmap">github</a> \
+		<a href="mailto:&#99;&#97;&#108;&#101;&#98;&#46;&#98;&#114;&#97;&#110;&#115;&#111;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">email</a>
+	</div>
+</nav>
 
-		<section id="portfolio">
-			<a href="#" id="back">&times;</a>
-			<section id="work">
+<section id="portfolio">
+	<a href="#" id="back">&times;</a>
+	<h1>Print</h1>
+			<figcaption>
+			<h2>Copy Copy</h2>
+			<p>An experiment in digital collage, 2011</p>
+		</figcaption>
+	<figure>
 
-				<h1>Print</h1>
+		<img src="images/col1.jpg" class="active">
+		<img src="images/col2.jpg">
+		<img src="images/col3.jpg">
+		<img src="images/col4.jpg">
+		<img src="images/col5.jpg">
+		<img src="images/col6.jpg">
+	</figure>
 
-				<a href="images/col1.jpg" rel="lightbox[col]" id="collage" class="thumbnail">
-					<h2>Copy Copy</h2>
-					<p>An experiment in digital collage, 2011</p>
-				</a>
+	<h2>things</h2>
+	<p>Poster series, 2011. Text was taken from a series of children's science books (authored by Isaac Asimov). Chunks of paragraphs were removed to give passages an alternate meaning, leaving questions unanswered and vandalizing the original message.</p>
+	<figure>
+		<img src="images/sci1.jpg" class="active">
+		<img src="images/sci2.jpg">
+		<img src="images/sci3.jpg">
+	</figure>
 
-				<a href="images/col2.jpg" rel="lightbox[col]"></a>
-				<a href="images/col3.jpg" rel="lightbox[col]"></a>
-				<a href="images/col4.jpg" rel="lightbox[col]"></a>
-				<a href="images/col5.jpg" rel="lightbox[col]"></a>
-				<a href="images/col6.jpg" rel="lightbox[col]"></a>
+	<h2>Glitch</h2>
+	<p>Image manipulation, 2011. High resolution images were imported into Photoshop, split into 3 channels (CMY), and exported to RAW format. The RAW files were imported into an audio manipulation program and cut, overlayed with digital effects, and tortured. The files were then spliced together with what remained of the original data in Photoshop.</p>
+	<figure>
+		<img src="images/glitch1.jpg" class="active">
+		<img src="images/glitch2.jpg">
+		<img src="images/glitch3.jpg">
+		<img src="images/glitch4.jpg">
+		<img src="images/glitch5.jpg">
+	</figure>
 
+	<h1>Package</h1>
 
-				<a href="images/sci1.jpg" rel="lightbox[sci]" id="science" class="thumbnail">
-					<h2>things</h2>
-					<p>Poster series, 2011. Text was taken from a series of children's science books (authored by Isaac Asimov). Chunks of paragraphs were removed to give passages an alternate meaning, leaving questions unanswered and vandalizing the original message.</p>
-				</a>
-				<a href="images/sci2.jpg" rel="lightbox[sci]"></a>
-				<a href="images/sci3.jpg" rel="lightbox[sci]"></a>
+	<h2>Luma</h2>
+	<p>Package design for lightbulbs, 2011</p>
+	<figure>
+		<img src="images/luma1.jpg" class="active">
+		<img src="images/luma2.jpg">
+		<img src="images/luma3.jpg">
+	</figure>
 
-
-				<a href="images/glitch1.jpg" rel="lightbox[glitch]" id="glitch" class="thumbnail">
-					<h2>Glitch</h2>
-					<p>Image manipulation, 2011. High resolution images were imported into Photoshop, split into 3 channels (CMY), and exported to RAW format. The RAW files were imported into an audio manipulation program and cut, overlayed with digital effects, and tortured. The files were then spliced together with what remained of the original data in Photoshop.</p>
-				</a>
-				<a href="images/glitch2.jpg" rel="lightbox[glitch]"></a>
-				<a href="images/glitch3.jpg" rel="lightbox[glitch]"></a>
-				<a href="images/glitch4.jpg" rel="lightbox[glitch]"></a>
-				<a href="images/glitch5.jpg" rel="lightbox[glitch]"></a>
-
-
-				<h1>Package</h1>
-
-				<a href="images/luma1.jpg" rel="lightbox[luma]" id="luma" class="thumbnail">
-					<h2>Luma</h2>
-					<p>Package design for lightbulbs, 2011</p>
-				</a>
-				<a href="images/luma2.jpg" rel="lightbox[luma]"></a>
-				<a href="images/luma3.jpg" rel="lightbox[luma]"></a>
-
-			</section>
-		</div>
-		<script src="js/jquery.js"></script>
-		<script src="js/cabe.js"></script>
-		<script src="js/shadowbox.js"></script>
-		<script>
-			Shadowbox.init({
-				animSequence:     "wh",
-				animate:		  true,
-	    		overlayColor:     "#DDD",
-	    		overlayOpacity:   "0.85",
-			});
-		</script>
-	</body>
-</html>
-
+</section>
+<script src="js/cabe.js"></script>
