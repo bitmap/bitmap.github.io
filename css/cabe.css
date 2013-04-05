@@ -1,8 +1,10 @@
 body {
     font: 18px/22px 'Helvetica Neue', sans-serif;
     color: rgba(0, 0, 0, 0.8);
-    margin: 0 auto;
+    margin: 0;
     overflow-y: scroll;
+    overflow-x: hidden;
+    background: url(../images/cabebg.jpg) center top no-repeat;
 }
 
 a {
@@ -19,16 +21,20 @@ header {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: -5;
-    background: url(../images/cabebg.jpg) center top no-repeat;
-    -webkit-transition: all 1300ms ease;
-       -moz-transition: all 1300ms ease;
-            transition: all 1300ms ease;
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+            transition: all 1s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
 }
 
 header.in-background {
-    background-position: -1920px top;
     opacity: 0;
+    z-index: -1;
+    -webkit-transform: translate3d(-80px, 0, 0);
+       -moz-transform: translate3d(-80px, 0, 0);
+            transform: translate3d(-80px, 0, 0);
     -webkit-filter:blur(30px);
        -moz-filter:blur(30px);
             filter:blur(30px);
@@ -38,18 +44,20 @@ h1 {
     font-weight: bold;
     margin: 1em;
     line-height: 1;
-    max-width: 700px;
+    max-width: 720px;
     min-width: 256px;
 }
 
 #portfolio {
-    margin: 0 auto;
+    margin: 0 auto 80px;
     width: 100%;
     position: fixed;
     opacity: 0;
-    -webkit-transition: all 1300ms ease;
-       -moz-transition: all 1300ms ease;
-            transition: all 1300ms ease;
+    background: white;
+    z-index: -2;
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+            transition: all 1s ease;
     -webkit-transform: translate3d(1920px, 0, 0);
        -moz-transform: translate3d(1920px, 0, 0);
             transform: translate3d(1920px, 0, 0);
@@ -84,7 +92,12 @@ h1 {
     box-sizing: border-box;
 }
 
-figure {margin: 0}
+figure {
+    margin: 0;
+    position: relative;
+    max-width: 660px;
+    margin: 0 auto;
+}
 
 figure img {
     width: 100%;
@@ -94,6 +107,22 @@ figure img {
 }
 
 figure img.active {display: block;}
+
+figure:after {
+    content: '→';
+    font-size: 4em;
+    position: absolute;
+    display: block;
+    padding: 5px;
+    top: 46%;
+    right: -90px;
+    box-sizing: border-box;
+    display: none;
+}
+
+figure:hover {cursor: pointer;}
+
+figure:hover:after {display: block;}
 
 #back {
     font-size: 1.4em;
@@ -105,10 +134,3 @@ figure img.active {display: block;}
     font-weight: bold;
     text-align: right;
 }
-
-/*Codepen*/
-/*#portfolio div {
-    width: 100%;
-    max-width: 660px;
-    margin: 0 auto 4em;
-}*/

@@ -1,48 +1,21 @@
-(function () {
-    'use strict'; //JSHint
+$(function() {
+     $('#work-link').click( function() {
+        $('#portfolio').addClass('in-focus');
+        $('header').addClass('in-background');
+     })
 
-    var workLink = document.getElementById('work-link'),
-        portfolio = document.getElementById('portfolio'),
-        header = document.getElementById('splash'),
-        back = document.getElementById('back'),
-        img = document.getElementsByTagName('img'),
-        fig = document.getElementsByTagName('figure'),
-
-        doWork = function () {
-            portfolio.className = 'in-focus';
-            header.className = 'in-background';
-        },
-
-        hideWork = function () {
-            portfolio.className = '';
-            header.className = '';
-        },
-
-        nextImage = function() {
-            return function() {
-                for (var i = 0; i <= fig.length; i++) {
-                    var figLoop = fig[i];
-
-                    if ( figLoop.lastElementChild.className === 'active' ) {
-                       figLoop.firstElementChild.className = 'active';
-                       //figLoop.getElementsByTagName("img").className = '';
-                       console.log("if");
-                    }
-                    else {
-                        fig.getElementsByClassName("active").nextElementSibling.className = 'active';
-                        // this.className = '';
-                        console.log('else');
-                    }
-                }
-            };
-        };
-
-    workLink.addEventListener('click', doWork);
-    back.addEventListener('click', hideWork);
-
-    for (var i = 0; i < img.length; i++) {
-        var item = img[i];
-        item.onclick = nextImage(item);
-    }
-
-}());
+    $('#back').click( function() {
+        $('#portfolio').removeClass('in-focus');
+        $('header').removeClass('in-background');
+     })
+    $('figure img').click( function() {
+        if ($(this).is(':last-child')) {
+            $(this).parent().find(':first-child').addClass('active');
+            $(this).removeClass('active');
+        }
+        else {
+            $(this).next('img').addClass('active');
+            $(this).removeClass('active');
+        }
+    })
+});
