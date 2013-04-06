@@ -4,7 +4,6 @@ body {
     margin: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-    background: url(../images/cabebg.jpg) center top no-repeat;
 }
 
 a {
@@ -22,6 +21,8 @@ header {
     width: 100%;
     position: fixed;
     z-index: 1;
+        background: url(../images/cabebg.jpg) center top no-repeat;
+
     -webkit-transition: all 1s ease;
        -moz-transition: all 1s ease;
             transition: all 1s ease;
@@ -104,26 +105,26 @@ figure img {
     width: 100%;
     max-width: 660px;
     margin: 0 auto 4em;
-    display: none;
+    display: none !important;
 }
 
-figure img.active {display: block;}
+figure img.active {display: block !important}
 
-figure:after {
+/*figure:after {
     content: '→';
     font-size: 4em;
     position: absolute;
     display: block;
     padding: 5px;
-    top: 46%;
+    top: 20px;
     right: -90px;
     box-sizing: border-box;
     display: none;
-}
+}*/
 
 figure:hover {cursor: pointer;}
 
-figure:hover:after {display: block;}
+/*figure:hover:after {display: block;}*/
 
 #back {
     font-size: 1.4em;
@@ -134,4 +135,12 @@ figure:hover:after {display: block;}
     padding: 10px;
     font-weight: bold;
     text-align: right;
+}
+
+@media screen and (max-width: 480px) {
+    * {
+    -webkit-transition: all 0s ease !important;
+       -moz-transition: all 0s ease !important;
+            transition: all 0s ease !important;
+    }
 }

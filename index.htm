@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
 <title>Caleb Branson</title>
 <link rel="stylesheet" href="css/cabe.css">
 <header id="splash">
@@ -12,33 +12,72 @@
 	<h2>Copy Copy Paste</h2>
 	<p>Digital collage / typography experiment, 2011. Various magazines and books were cut up, scanned, and pasted back together in Photoshop to convey mixed messages.</p>
 	<figure>
-		<img src="images/col1.jpg" alt='Copy Copy Paste' class="active">
-		<img src="images/col2.jpg" alt='Copy Copy Paste'>
-		<img src="images/col3.jpg" alt='Copy Copy Paste'>
-		<img src="images/col4.jpg" alt='Copy Copy Paste'>
-		<img src="images/col5.jpg" alt='Copy Copy Paste'>
-		<img src="images/col6.jpg" alt='Copy Copy Paste'>
+		<img src="images/lazy.gif" data-original="images/col1.jpg" alt='Copy Copy Paste' class="active">
+		<img src="images/lazy.gif" data-original="images/col2.jpg" alt='Copy Copy Paste'>
+		<img src="images/lazy.gif" data-original="images/col3.jpg" alt='Copy Copy Paste'>
+		<img src="images/lazy.gif" data-original="images/col4.jpg" alt='Copy Copy Paste'>
+		<img src="images/lazy.gif" data-original="images/col5.jpg" alt='Copy Copy Paste'>
+		<img src="images/lazy.gif" data-original="images/col6.jpg" alt='Copy Copy Paste'>
 	</figure>
 
 	<h2>Things</h2>
 	<p>Poster series, 2011. Text was taken from a series of children's science books (authored by Isaac Asimov). Chunks of paragraphs were removed to give passages an alternate meaning, leaving questions unanswered and vandalizing the original message.</p>
 	<figure>
-		<img src="images/sci1.jpg" alt='Things' class="active">
-		<img src="images/sci2.jpg" alt='Things'>
-		<img src="images/sci3.jpg" alt='Things'>
+		<img src="images/lazy.gif" data-original="images/sci1.jpg" alt='Things' class="active">
+		<img src="images/lazy.gif" data-original="images/sci2.jpg" alt='Things'>
+		<img src="images/lazy.gif" data-original="images/sci3.jpg" alt='Things'>
 	</figure>
 
 	<h2>Glitch</h2>
 	<p>Image manipulation, 2011. High resolution images were imported into Photoshop, split into 3 channels (CMY), and exported to RAW format. The RAW files were imported into an audio manipulation program and cut, overlayed with digital effects, and tortured. The files were then spliced together with what remained of the original data in Photoshop.</p>
 	<figure>
-		<img src="images/glitch1.jpg" alt='Glitch'>
-		<img src="images/glitch2.jpg" alt='Glitch'>
-		<img src="images/glitch3.jpg" alt='Glitch'>
-		<img src="images/glitch4.jpg" alt='Glitch' class="active">
-		<img src="images/glitch5.jpg" alt='Glitch'>
+		<img src="images/lazy.gif" data-original="images/glitch1.jpg" alt='Glitch'>
+		<img src="images/lazy.gif" data-original="images/glitch2.jpg" alt='Glitch'>
+		<img src="images/lazy.gif" data-original="images/glitch3.jpg" alt='Glitch'>
+		<img src="images/lazy.gif" data-original="images/glitch4.jpg" alt='Glitch' class="active">
+		<img src="images/lazy.gif" data-original="images/glitch5.jpg" alt='Glitch'>
 	</figure>
 
 </section>
 
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="js/cabe.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script>
+$(function () {
+    'use strict';
+    $('img').lazyload({
+        threshold: 200
+    });
+
+
+    $('#work-link').click(function () {
+        $('#portfolio').addClass('in-focus');
+        $('header').addClass('in-background');
+        $(window).trigger('scroll');
+    });
+
+    $('#back').click(function () {
+        $('#portfolio').removeClass('in-focus');
+        $('header').removeClass('in-background');
+    });
+    $('figure img').click(function () {
+
+        if ($(this).is(':last-child')) {
+            $(this).parent().find(':first-child').addClass('active');
+            $(this).removeClass('active').css('');
+            $(this).trigger('scroll');
+
+        } else {
+            $(this).next('img').addClass('active');
+            $(this).removeClass('active').css('');
+            $(this).trigger('scroll');
+        }
+    });
+    $("img", "figure").each(function() {
+	    $(this).load(function() {
+	        var width = $(this).width();
+	        var height = $(this).height();
+	        $(this).parent().css("height", height);
+	    });
+	});
+});</script>
