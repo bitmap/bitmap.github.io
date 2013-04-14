@@ -1,9 +1,9 @@
 $(function () {
-    'use strict';
+    'use strict'; //JSHint
+
     $('img').lazyload({
         threshold: 200
     });
-
 
     $('#work-link').click(function () {
         $('#portfolio').addClass('in-focus');
@@ -15,6 +15,7 @@ $(function () {
         $('#portfolio').removeClass('in-focus');
         $('header').removeClass('in-background');
     });
+
     $('figure img').click(function () {
 
         if ($(this).is(':last-child')) {
@@ -28,11 +29,12 @@ $(function () {
             $(this).trigger('scroll');
         }
     });
+
     $("img", "figure").each(function() {
-    $(this).load(function() {
-        var width = $(this).width();
-        var height = $(this).height();
-        $(this).parent().css("height", height);
+        $(this).load(function() {
+            var width = $(this).width();
+            var height = $(this).height();
+            $(this).parent().css("height", height);
+        });
     });
-});
 });
