@@ -30,11 +30,11 @@ $(function () {
         }
     });
 
-    $("img", "figure").each(function() {
-        $(this).load(function() {
-            var width = $(this).width();
-            var height = $(this).height();
-            $(this).parent().css("height", height);
-        });
-    });
+    // $("img", "figure").each(function() {
+    //     $(this).load(function() {
+    //         var width = $(this).width();
+    //         var height = $(this).height();
+    //         $(this).parent().css("height", height);
+    //     });
+    // });
 });
