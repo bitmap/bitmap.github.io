@@ -40,7 +40,7 @@
 
 </section>
 
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery-2.0.0.min.js"></script>
 <script src="js/jquery.lazyload.min.js"></script>
 <script>
 $(function(){$("img").lazyload({threshold:200});$("#work-link").click(function(){$("#portfolio").addClass("in-focus");$("header").addClass("in-background");$(window).trigger("scroll")});$("#back").click(function(){$("#portfolio").removeClass("in-focus");$("header").removeClass("in-background")});$("figure img").click(function(){if($(this).is(":last-child")){$(this).parent().find(":first-child").addClass("active");$(this).removeClass("active").css("");$(this).trigger("scroll")}else{$(this).next("img").addClass("active");$(this).removeClass("active").css("");$(this).trigger("scroll")}});});</script>
