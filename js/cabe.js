@@ -5,18 +5,15 @@ $(function () {
         threshold: 200
     });
 
+
+
     $('#work-link').click(function () {
         $('#portfolio').addClass('in-focus');
         $('header').addClass('in-background');
         $(window).trigger('scroll');
     });
 
-    $('#back').click(function () {
-        $('#portfolio').removeClass('in-focus');
-        $('header').removeClass('in-background');
-    });
-
-    $('figure img').click(function () {
+    $('figure .next-image').click(function () {
 
         if ($(this).is(':last-child')) {
             $(this).parent().find(':first-child').addClass('active');
@@ -30,11 +27,15 @@ $(function () {
         }
     });
 
-    // $("img", "figure").each(function() {
-    //     $(this).load(function() {
-    //         var width = $(this).width();
-    //         var height = $(this).height();
-    //         $(this).parent().css("height", height);
-    //     });
-    // });
+    $("img", "figure").each(function() {
+        $(this).load(function() {
+            var width = $(this).width();
+            var height = $(this).height();
+            $(this).parent().css("height", height);
+        });
+    });
 });
+
+  $(document).ready() {
+        $('h1').addClass('fade-in');
+    }

@@ -1,10 +1,15 @@
 body {
-  font: 18px/22px 'Helvetica Neue', sans-serif;
-  background: #eee;
+  font: 21px/28px 'Baskerville', 'Georgia', serif;
   color: rgba(0, 0, 0, 0.8);
   margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box;
 }
 a {
   color: #cc3399;
@@ -20,7 +25,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 1;
-  background: url(../images/bg.gif) center top no-repeat;
+  background: #eeeeee url(../images/bg.gif) center top no-repeat;
   transition: 1s ease;
   -webkit-transition-property: opacity, -webkit-transform, -webkit-filter;
   transition-property: opacity, -webkit-transform, -webkit-filter;
@@ -33,15 +38,24 @@ header.in-background {
   -webkit-filter: blur(30px);
 }
 h1 {
+  opacity: 0;
   margin: 1em;
   line-height: 1;
   max-width: 720px;
   min-width: 256px;
+  transition: 1s ease;
+  -webkit-transition-property: opacity, -webkit-transform, -webkit-filter;
+  transition-property: opacity, -webkit-transform, -webkit-filter;
+  -webkit-transform: translate3d(0, -20px, 0);
+}
+h1.fade-in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 #portfolio {
-  background: white;
   margin: 0 auto 80px;
   width: 100%;
+  height: 100%;
   position: fixed;
   opacity: 0;
   z-index: -2;
@@ -59,46 +73,51 @@ h1 {
   -webkit-filter: blur(0);
 }
 #portfolio h2 {
-  width: 92%;
-  max-width: 700px;
-  margin: 1em auto;
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 3rem 1rem 0;
 }
 #portfolio p {
-  font-family: 'Times', serif;
-  width: 92%;
-  max-width: 700px;
-  margin: 1em auto;
-  padding: 0 1em;
+  width: 100%;
+  max-width: 660px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+#portfolio ul {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 figure {
-  margin: 0;
-  position: relative;
   max-width: 660px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
-figure:hover {
-  cursor: pointer;
+figure a {
+  font-size: 36px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+figure .next-image {
+  float: right;
+}
+figure h3 {
+  margin: 0 auto;
+  padding: 3rem 1rem 0;
 }
 figure img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   width: 100%;
   max-width: 660px;
-  margin: 0 auto 4em;
+  margin: 0 auto;
   display: none !important;
 }
 figure img.active {
   display: block !important;
-}
-#back {
-  font-size: 1.4em;
-  width: 92%;
-  max-width: 700px;
-  margin: 0 auto;
-  display: block;
-  padding: 1em 1em 0;
-}
-@media screen and (max-width: 480px) {
-  * {
-    transition: 0 none;
-  }
 }
