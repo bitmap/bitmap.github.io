@@ -1,0 +1,16 @@
+.blur( @blur ) {
+    -webkit-filter: blur(@blur);
+}
+
+.translate3d( @x, @y, @z ) {
+	-webkit-transform: translate3d(@x, @y, @z);
+}
+
+.transition( @time, @easing ) {
+    transition: @time @easing;
+}
+
+.transition-properties( @prop ) {
+	-webkit-transition-property: @prop;
+    transition-property: @prop;
+}
