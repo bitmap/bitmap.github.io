@@ -1,41 +1,10 @@
-$(function () {
-    'use strict'; //JSHint
+var openLink = document.getElementById('work-link'),
+    portfolio = document.getElementById('portfolio'),
+    splash = document.getElementById('splash'),
 
-    $('img').lazyload({
-        threshold: 200
-    });
+gogogo = function() {
+  portfolio.className = 'in-focus';
+  splash.className = 'in-background';
+};
 
-
-
-    $('#work-link').click(function () {
-        $('#portfolio').addClass('in-focus');
-        $('header').addClass('in-background');
-        $(window).trigger('scroll');
-    });
-
-    $('figure .next-image').click(function () {
-
-        if ($(this).is(':last-child')) {
-            $(this).parent().find(':first-child').addClass('active');
-            $(this).removeClass('active').css('');
-            $(this).trigger('scroll');
-
-        } else {
-            $(this).next('img').addClass('active');
-            $(this).removeClass('active').css('');
-            $(this).trigger('scroll');
-        }
-    });
-
-    $("img", "figure").each(function() {
-        $(this).load(function() {
-            var width = $(this).width();
-            var height = $(this).height();
-            $(this).parent().css("height", height);
-        });
-    });
-});
-
-  $(document).ready() {
-        $('h1').addClass('fade-in');
-    }
+openLink.onclick = gogogo;
