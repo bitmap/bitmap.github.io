@@ -1,1 +1,23 @@
-html{font:20px/1.5 'Georgia', serif;color:rgba(0,0,0,0.8)}body{width:100%;max-width:38rem;margin:0 auto;padding:3rem;box-sizing:border-box}h1,h2{font-family:'Helvetica Neue', Arial, sans-serif}h1,h2,p,ul{margin:0 0 1rem}a{color:#00E;text-decoration:none}ul{list-style-type:none}
+html {
+  font: 20px/1.5 'Georgia', serif;
+  color: rgba(0, 0, 0, 0.8); }
+
+body {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box; }
+
+h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+h1, p, ul {
+  margin: 0 0 1rem; }
+
+a {
+  color: #00E;
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
