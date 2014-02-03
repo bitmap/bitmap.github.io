@@ -33,9 +33,14 @@ h1 {
     max-width: 660px;
     height: 0;
     margin: auto;
-    position: absolute;
-    top: 0; bottom: 50%; left: 0; right: 0;
+    position: fixed;
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: 0;
     padding: 1rem;
+    -webkit-transform:translateZ(-1px);
+    transform:translateZ(-1px);
 }
 
 #portfolio {
@@ -45,6 +50,8 @@ h1 {
     top: 75%;
     background: white;
     padding: 0 1rem 3rem;
+    -webkit-transform:translateZ(1px);
+    transform:translateZ(1px);
 
     h2, h3 {
         width: 100%;
