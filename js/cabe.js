@@ -1,70 +1,65 @@
 (function () {
 
-    function hasClass(elem, className) {
-        return (new RegExp("(^|\\s)" + className + "(\\s|$)")).test(elem.className);
-    };
+  var tabContainer = document.querySelectorAll('.zzz');
 
-    function makeTabs(tabContainer) {
+  function makeTabs(tabContainer) {
+    var img = tabContainer.querySelector("img");
+    tabContainer.insertBefore(document.createElement("ul"), img).className = "tabs";
 
-      var img = tabContainer.querySelector("img");
+    var tabHolder = tabContainer.querySelector(".tabs"),
+      tabItems = tabHolder.children,
+      tabParent = tabHolder.parentNode,
+      count = tabParent.querySelectorAll("img").length;
 
-      tabContainer.insertBefore(document.createElement("ul"), img).className = "tabs";
+    for (i = 0; i < count; i++) {
+      elem = document.createElement("li");
+      tabHolder.appendChild(elem);
+      elem.setAttribute("data-index", i);
+      elem.addEventListener("click", tabClick);
+    }
 
-      var tabHolder = tabContainer.querySelector(".tabs"),
-        tabItems = tabHolder.children,
-        tabParent = tabHolder.parentNode,
-        count = tabParent.querySelectorAll("img").length;
+    function tabClick(e) {
 
-      for (i = 0; i < count; i++) {
-        elem = document.createElement("li");
-        tabHolder.appendChild(elem);
-        elem.setAttribute("data-index", i);
-        elem.addEventListener("click", tabClick);
-      }
+      var index = e.target.getAttribute("data-index"),
+          imageCollection = tabContainer.querySelectorAll("img"),
+          elem,
+          j;
 
-      function tabClick(e) {
+      if (tabItems[index].classname = "active") {
 
-        var index = e.target.getAttribute("data-index"),
-            imageCollection = tabContainer.querySelectorAll("img"),
-            elem,
-            j;
+        for (j = 0; j < imageCollection.length; j++) {
+          elem = imageCollection[j];
 
-        if (!hasClass(tabItems[index], "active")) {
+          if (j == index) {
 
-          for (j = 0; j < imageCollection.length; j++) {
-            elem = imageCollection[j];
+            if (elem.hasAttribute("data-src")) {
+              elem.setAttribute('src', elem.getAttribute('data-src'))
+              elem.removeAttribute('data-src');
 
-            if (j == index) {
-
-              if (elem.hasAttribute("data-src")) {
-                elem.setAttribute('src', elem.getAttribute('data-src'))
-                elem.removeAttribute('data-src');
-
-              }
-
-              elem.classList.add("active");
-              tabItems[j].classList.add("active");
             }
 
-            else {
-              tabItems[j].classList.remove("active");
-              elem.classList.remove("active");
-            }
+            elem.classList.add("active");
+            tabItems[j].classList.add("active");
+          }
+
+          else {
+            tabItems[j].classList.remove("active");
+            elem.classList.remove("active");
           }
         }
       }
-
-      img.setAttribute('src', img.getAttribute('data-src'))
-      img.removeAttribute('data-src');
-      img.classList.add("active");
-      tabItems[0].classList.add("active");
     }
 
-    var each = Array.prototype.forEach,
-        project = document.querySelectorAll('.zzz');
+    img.setAttribute('src', img.getAttribute('data-src'))
+    img.removeAttribute('data-src');
+    img.classList.add("active");
+    tabItems[0].classList.add("active");
+  }
 
-    each.call(project, function(element) {
-      makeTabs(element);
-    });
+  var each = Array.prototype.forEach;
+
+  each.call(tabContainer, function(element) {
+    makeTabs(element);
+  });
 
 })();
