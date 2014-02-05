@@ -1,7 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font: 21px/1.4 'Hoefler text', 'Georgia', serif;
@@ -9,23 +8,22 @@ body {
   margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
-  background: #eeeeee url(../images/bg.gif) center top no-repeat fixed;
-}
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/bg.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: -25% -250px; }
 
 h1, h2, h3 {
   font-family: 'Helvetica', Arial, sans-serif;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 a {
   color: #CC3399;
   text-decoration: none;
-  white-space: nowrap;
-}
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
+  white-space: nowrap; }
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline; }
 
 h1 {
   line-height: 1;
@@ -39,97 +37,98 @@ h1 {
   right: 0;
   padding: 1rem;
   -webkit-transform: translateZ(-1px);
-  transform: translateZ(-1px);
-}
+  transform: translateZ(-1px); }
 
 #portfolio {
   width: 100%;
   position: absolute;
-  top: 75%;
+  top: 40%;
   background: white;
-  padding: 0 1rem 20rem;
+  padding: 0 1rem 2rem;
   -webkit-transform: translateZ(1px);
-  transform: translateZ(1px);
-}
-#portfolio h2, #portfolio h3 {
-  width: 100%;
-  max-width: 660px;
-  margin: 3rem auto 1rem;
-}
-#portfolio p {
-  width: 100%;
-  max-width: 660px;
-  margin: 0 auto 1rem;
-}
-#portfolio .presence {
+  transform: translateZ(1px); }
+  #portfolio h2, #portfolio h3 {
+    width: 100%;
+    max-width: 660px;
+    margin: 2rem auto 1rem;
+    font-weight: 200; }
+  #portfolio h3 {
+    font-size: 21px; }
+  #portfolio p {
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto 1rem; }
+
+.presence {
   list-style: none;
   width: 100%;
-  max-width: 600px;
+  max-width: 660px;
   margin: 0 auto;
-}
+  padding: 0; }
+  .presence li {
+    display: inline-block;
+    padding: 0 1rem 0 0; }
 
 .project {
-  margin: 0 auto;
-  padding: 0 1rem;
-  max-width: 660px;
-}
-.project .tabs {
-  width: 100%;
-  max-width: 660px;
-  margin: 0 auto 1rem;
-  padding: 0;
-  text-align: center;
-  color: #bbb;
-}
-.project .tabs li {
-  font-family: sans-serif;
-  user-select: none;
-  -webkit-user-select: none;
-  display: inline-block;
-  cursor: pointer;
-  padding: 5px 20px;
-  font-weight: bold;
-  transition: 500ms;
-}
-.project .tabs li:hover {
-  color: #888;
-}
-.project .tabs li.active {
-  background: #eee;
-  color: #888;
-}
-.project img {
-  width: auto;
-  max-width: 100%;
-  margin: 0 auto;
-  display: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.project img.active {
-  display: block;
-  -webkit-animation: fadein 1s;
-}
+  margin: 0 auto 6rem; }
+  .project .tabs {
+    width: 100%;
+    max-width: 660px;
+    margin: 1rem auto;
+    padding: 0;
+    text-align: center;
+    color: #bbb; }
+  .project .tabs li {
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+    border: 20px solid white;
+    font-weight: bold;
+    transition: 500ms;
+    background: #ccc;
+    margin: 0 1px 0 0;
+    border-radius: 50%; }
+    .project .tabs li:hover {
+      background: #888; }
+    .project .tabs li.active {
+      background: #888; }
+  .project.zzz img {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: none;
+    user-select: none;
+    -webkit-user-select: none;
+    float: none; }
+    .project.zzz img.active {
+      display: block;
+      -webkit-animation: fadein 1s; }
+  .project .full {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    text-align: center; }
+  .project .full img {
+    display: inline-block; }
 
 @-webkit-keyframes fadein {
   from {
-    opacity: 0;
-  }
+    opacity: 0; }
 
   to {
-    opacity: 1;
-  }
-}
-.red {
-  background: red;
-}
+    opacity: 1; } }
 
 @media screen and (max-width: 576px) {
+  body {
+    background: white; }
+
   h1 {
-    bottom: 75%;
-  }
+    position: static;
+    height: auto; }
 
   #portfolio {
     font-size: 18px;
-  }
-}
+    position: static; } }

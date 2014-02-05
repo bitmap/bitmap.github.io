@@ -6,20 +6,20 @@
 
     function makeTabs(tabContainer) {
 
-      tabContainer.appendChild(document.createElement("ul")).className = "tabs";
+      var img = tabContainer.querySelector("img");
+
+      tabContainer.insertBefore(document.createElement("ul"), img).className = "tabs";
 
       var tabHolder = tabContainer.querySelector(".tabs"),
         tabItems = tabHolder.children,
         tabParent = tabHolder.parentNode,
-        count = tabParent.querySelectorAll("img").length,
-        initialTabNumber = 1;
+        count = tabParent.querySelectorAll("img").length;
 
       for (i = 0; i < count; i++) {
         elem = document.createElement("li");
         tabHolder.appendChild(elem);
         elem.setAttribute("data-index", i);
         elem.addEventListener("click", tabClick);
-        elem.innerHTML = initialTabNumber++;
       }
 
       function tabClick(e) {
@@ -44,7 +44,7 @@
 
               elem.classList.add("active");
               tabItems[j].classList.add("active");
-            } 
+            }
 
             else {
               tabItems[j].classList.remove("active");
@@ -54,16 +54,14 @@
         }
       }
 
-      var img = tabContainer.querySelector("img");
-
       img.setAttribute('src', img.getAttribute('data-src'))
       img.removeAttribute('data-src');
       img.classList.add("active");
       tabItems[0].classList.add("active");
     }
-    
+
     var each = Array.prototype.forEach,
-        project = document.querySelectorAll('.project');
+        project = document.querySelectorAll('.zzz');
 
     each.call(project, function(element) {
       makeTabs(element);

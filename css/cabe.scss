@@ -9,7 +9,10 @@ body {
     margin: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-    background: #eee url(../images/bg.gif) center top no-repeat fixed;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../images/bg.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: -25% -250px;
 
 }
 
@@ -46,16 +49,21 @@ h1 {
 #portfolio {
     width: 100%;
     position: absolute;
-    top: 75%;
+    top: 40%;
     background: white;
-    padding: 0 1rem 20rem;
+    padding: 0 1rem 2rem;
     -webkit-transform:translateZ(1px);
     transform:translateZ(1px);
 
     h2, h3 {
         width: 100%;
         max-width: 660px;
-        margin: 3rem auto 1rem;
+        margin: 2rem auto 1rem;
+        font-weight: 200;
+    }
+
+    h3 {
+        font-size: 21px;
     }
 
     p {
@@ -63,24 +71,28 @@ h1 {
         max-width: 660px;
         margin: 0 auto 1rem;
     }
+}
 
-    .presence {
-        list-style: none;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+.presence {
+    list-style: none;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        padding: 0 1rem 0 0;
     }
 }
 
 .project {
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: 660px;
+    margin: 0 auto 6rem;
 
     .tabs {
         width: 100%;
         max-width: 660px;
-        margin: 0 auto 1rem;
+        margin: 1rem auto;
         padding: 0;
         text-align: center;
         color: #bbb;
@@ -92,30 +104,45 @@ h1 {
         user-select: none; -webkit-user-select: none;
         display: inline-block;
         cursor: pointer;
-        padding: 5px 20px;
+        padding: 5px;
+        border: 20px solid white;
         font-weight: bold;
         transition: 500ms;
+        background: #ccc;
+        margin: 0 1px 0 0;
+        border-radius: 50%;
 
         &:hover {
-            color: #888;
-        } 
+            background: #888;
+        }
 
         &.active {
-            background: #eee;
-            color: #888;
+            background: #888;
         }
     }
 
-    img {
+    &.zzz img {
         width: auto;
         max-width: 100%;
         margin: 0 auto;
         display: none;
         user-select: none; -webkit-user-select: none;
+        float: none;
         &.active {
             display: block;
             -webkit-animation: fadein 1s;
         }
+    }
+
+    .full {
+        clear: both;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .full img {
+        display: inline-block;
     }
 }
 
@@ -124,9 +151,8 @@ h1 {
     to {opacity: 1}
 }
 
-.red {background: red;}
-
 @media screen and (max-width: 576px) {
-    h1 {bottom: 75%;}
-    #portfolio {font-size: 18px;}
+    body {background: white;}
+    h1 {position: static; height: auto;}
+    #portfolio {font-size: 18px; position: static; }
 }
