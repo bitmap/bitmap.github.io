@@ -43,12 +43,11 @@ h1 {
 }
 
 #portfolio {
-  margin: 0 auto 80px;
   width: 100%;
   position: absolute;
   top: 75%;
   background: white;
-  padding: 0 1rem 3rem;
+  padding: 0 1rem 20rem;
   -webkit-transform: translateZ(1px);
   transform: translateZ(1px);
 }
@@ -62,37 +61,67 @@ h1 {
   max-width: 660px;
   margin: 0 auto 1rem;
 }
-#portfolio ul {
+#portfolio .presence {
   list-style: none;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
 
-figure {
-  max-width: 660px;
+.project {
   margin: 0 auto;
   padding: 0 1rem;
+  max-width: 660px;
 }
-figure .next-img,
-figure .prev-img {
-  font-size: 36px;
-  user-select: none;
-  -webkit-user-select: none;
-}
-figure .next-img {
-  float: right;
-}
-figure img {
+.project .tabs {
   width: 100%;
   max-width: 660px;
+  margin: 0 auto 1rem;
+  padding: 0;
+  text-align: center;
+  color: #bbb;
+}
+.project .tabs li {
+  font-family: sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 20px;
+  font-weight: bold;
+  transition: 500ms;
+}
+.project .tabs li:hover {
+  color: #888;
+}
+.project .tabs li.active {
+  background: #eee;
+  color: #888;
+}
+.project img {
+  width: auto;
+  max-width: 100%;
   margin: 0 auto;
-  display: none !important;
+  display: none;
   user-select: none;
   -webkit-user-select: none;
 }
-figure img.active {
-  display: block !important;
+.project img.active {
+  display: block;
+  -webkit-animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.red {
+  background: red;
 }
 
 @media screen and (max-width: 576px) {
