@@ -93,9 +93,9 @@ a:hover {
     padding-top: 60px;
 }
 
-.werk .active {display: block}
+.werk > img.active {display: block}
 
-.werk .tabs {
+.werk .werk-tabs {
     position: relative;
     list-style: none;
     margin: 0 auto;
@@ -107,7 +107,7 @@ a:hover {
     height: 60px;
 }
 
-.werk .tabs > li {
+.werk .werk-tabs > li {
     display: inline-block;
     background: black;
     color: white;
@@ -118,7 +118,7 @@ a:hover {
     cursor: pointer;
 }
 
-.werk .tabs > li.active {
+.werk .werk-tabs > li.active {
     background: white;
     color: black;
 }

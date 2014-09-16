@@ -25,10 +25,10 @@
             }
         }
 
-        werk.appendChild(document.createElement("ul")).className = "tabs";
+        werk.appendChild(document.createElement("ul")).className = "werk-tabs";
         werk.appendChild(document.createElement("div")).className = "close";
 
-        var tabHolder = werk.querySelector(".tabs"), 
+        var tabHolder = werk.querySelector(".werk-tabs"), 
             tabItems = tabHolder.children, 
             tabCount = werk.querySelectorAll("img").length, 
             elem, i;
