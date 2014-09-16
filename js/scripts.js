@@ -72,7 +72,7 @@
     });
   }
 
-  var tabContainer = document.querySelectorAll('.zzz'),
+  var tabContainer = document.querySelectorAll('.gallery'),
       link = document.querySelectorAll('.launch');
 
   Array.prototype.forEach.call(tabContainer, function(el) {

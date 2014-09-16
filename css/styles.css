@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: line-through;
 }
 
 .rap {
@@ -66,15 +66,11 @@ a:hover {
     margin-top: -0.5rem;
     background: black;
     font-style: italic;
-    color: white;
+    color: #F5F5F5;
 }
 
-.foot {
-    display: block;
-    margin-top: 6rem;
-}
-
-.zzz {
+/* MODAL (CLEAN ME) */
+.gallery {
     display: none;
     background: rgba(0,0,0,0.9);
     position: fixed;
@@ -82,11 +78,11 @@ a:hover {
     z-index: 1000;
 }
 
-.zzz.is-visible {
+.gallery.is-visible {
     display: block;
 }
 
-.zzz img {
+.gallery > img {
     display: none;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -97,9 +93,9 @@ a:hover {
     padding-top: 60px;
 }
 
-.zzz .active {display: block}
+.gallery .active {display: block}
 
-.zzz .tabs {
+.gallery .tabs {
     position: relative;
     list-style: none;
     margin: 0 auto;
@@ -111,7 +107,7 @@ a:hover {
     height: 60px;
 }
 
-.zzz .tabs li {
+.gallery .tabs > li {
     display: inline-block;
     background: black;
     color: white;
@@ -122,12 +118,12 @@ a:hover {
     cursor: pointer;
 }
 
-.zzz .tabs li.active {
+.gallery .tabs > li.active {
     background: white;
     color: black;
 }
 
-.zzz .close {
+.gallery .close {
     font-size: 0.75em;
     background: transparent;
     position: absolute;
@@ -144,6 +140,6 @@ a:hover {
     line-height: 60px;
 }
 
-.zzz .close::after {
+.gallery .close::after {
     content: "×";
 }
