@@ -2,56 +2,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
 <title>Caleb Branson</title>
-<style>
-  *{-webkit-box-sizing:border-box;box-sizing:border-box}body{font:21px/1.4 'Hoefler text','Georgia',serif;color:rgba(0,0,0,0.9);margin:0;overflow-y:scroll;overflow-x:hidden;background-image:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url(images/bg.gif);background-size:cover;background-attachment:fixed;background-position:-25% -250px}h1,h2,h3{font-family:'Helvetica',Arial,sans-serif;box-sizing:border-box}a{color:#c39;text-decoration:none;white-space:nowrap}a:hover{cursor:pointer;text-decoration:underline}h1{line-height:1;max-width:660px;height:0;margin:auto;position:fixed;top:0;bottom:50%;left:0;right:0;padding:1rem;-webkit-transform:translateZ(-1px);transform:translateZ(-1px)}#portfolio{width:100%;position:absolute;top:40%;background:white;padding:0 1rem 2rem;-webkit-transform:translateZ(1px);transform:translateZ(1px)}#portfolio h2,#portfolio h3{width:100%;max-width:660px;margin:2rem auto 1rem;font-weight:200}#portfolio h3{font-size:21px}#portfolio p{width:100%;max-width:660px;margin:0 auto 1rem}.presence{list-style:none;width:100%;max-width:660px;margin:0 auto;padding:0}.presence li{display:inline-block;padding:0 1rem 0 0}.project{margin:0 auto 6rem}.project .tabs{width:100%;max-width:660px;margin:1rem auto;padding:0;text-align:center;color:#bbb}.project .tabs li{font-family:sans-serif;user-select:none;-webkit-user-select:none;display:inline-block;cursor:pointer;padding:5px;border:20px solid white;font-weight:bold;transition:500ms;background:#ccc;margin:0 1px 0 0;border-radius:50%}.project .tabs li:hover{background:#888}.project .tabs li.active{background:#888}.project.zzz img{width:auto;max-width:100%;margin:0 auto;display:none;user-select:none;-webkit-user-select:none;float:none}.project.zzz img.active{display:block;-webkit-animation:fadein 1s}.project .full{clear:both;width:100%;overflow:hidden;text-align:center}.project .full img{display:inline-block}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@media screen and (max-width:576px){body{background:white}h1{position:static;height:auto}#portfolio{font-size:18px;position:static}}
-</style>
-<header>
-    <h1>Caleb Branson is a designer &amp; developer in Portland, OR</h1>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/styles.css">
+<header class="full-wrap hero">
+    <h1 class="med-wrap hero_title">Caleb Branson</h1>
 </header>
-<section id="portfolio">
+<section class="med-wrap">
 
-    <h2>presence</h2>
-        <p>front-end at WebMD
-        <ul class="presence">
-            <li><a href="http://twitter.com/cabebr">@cabebr</a>
-            <li><a href="http://github.com/cabebr">github/cabebr</a>
-            <li><a href="http://codepen.io/cabebr">codepen</a>
-            <li><a href="http://linkedin.com/calebbranson">linkedin</a>
-            <!-- <li>r&eacute;sum&eacute; (<a>pdf</a> or <a>md</a>) -->
-            <li><a href="mailto:caleb.branson@gmail.com">email</a>
+    <h2 class="heading">Presence</h2>
+    <p>Designer / Front-end Developer at WebMD
+    <ul class="inline-list">
+        <li><a href="http://twitter.com/cabebr">twitter</a>
+        <li><a href="http://github.com/cabebr">github</a>
+        <li><a href="http://codepen.io/cabebr">codepen</a>
+        <li><a href="http://linkedin.com/calebbranson">linkedin</a>
+        <!-- <li>r&eacute;sum&eacute; (<a>pdf</a> or <a>md</a>) -->
+        <li><a href="mailto:caleb.branson@gmail.com">email</a>
+    </ul>
+
+<!--     <h2 class="heading">Skills</h2>
+    <div class="cf">
+        <ul class="pull-l gutter-r">
+            <li>HTML5 / CSS3
+            <li>JavaScript
+            <li>Node.js
+            <li>Less / Sass
+            <li>Git / Mercurial
         </ul>
 
-    <h2>projects</h2>
-    <div class="project zzz">
-        <h3>Copy Copy Paste</h3>
-        <p>Digital collage / typography experiment. Various magazines and books were cut up, scanned, and pasted back together in Photoshop to convey mixed messages.</p>
-        <img data-src="images/col1.jpg">
-        <img data-src="images/col2.jpg">
-        <img data-src="images/col3.jpg">
-        <img data-src="images/col4.jpg">
-        <img data-src="images/col5.jpg">
-        <img data-src="images/col6.jpg">
+        <ul class="pull-l">
+            <li>Photoshop
+            <li>Illustrator
+            <li>Typography
+            <li>Responsive Design
+        </ul>
+    </div> -->
+
+    <h2 class="heading">Projects</h2>
+    <div>
+        <h3><a href="#">Are you lonesome tonight?</a></h3>
+        <p>Digital collage / typography experiment.</p>
+<!--         <img src="images/col1.jpg">
+        <img src="images/col2.jpg">
+        <img src="images/col3.jpg">
+        <img src="images/col4.jpg">
+        <img src="images/col5.jpg">
+        <img src="images/col6.jpg"> -->
     </div>
 
-    <div class="project zzz">
-        <h3>Glitch</h3>
-        <p>Image manipulation. High resolution images were imported into Photoshop, split into 3 channels (CMY), and exported to RAW format. The RAW files were imported into an audio manipulation program and cut, overlayed with digital effects, and tortured. The files were then spliced together with what remained of the original data in Photoshop.</p>
-        <img data-src="images/glitch1.jpg">
-        <img data-src="images/glitch2.jpg">
-        <img data-src="images/glitch3.jpg">
-        <img data-src="images/glitch4.jpg">
-        <img data-src="images/glitch5.jpg">
+    <div>
+        <h3><a href="#">Glitches</a></h3>
+        <p>Tortured image manipulation.</p>
+<!--         <img src="images/glitch1.jpg">
+        <img src="images/glitch2.jpg">
+        <img src="images/glitch3.jpg">
+        <img src="images/glitch4.jpg">
+        <img src="images/glitch5.jpg"> -->
     </div>
 
-    <div class="project">
-        <h3>Things</h3>
-        <p>Poster series. Text was taken from a series of children's science books (authored by Isaac Asimov). Chunks of paragraphs were removed to give passages an alternate meaning, leaving questions unanswered and vandalizing the original message.</p>
-        <div class="full">
-            <img src="images/sci1.jpg">
+    <div>
+        <h3><a href="#">A Motionless Earth</a></h3>
+        <p>Poster series.</p>
+        <div>
+<!--             <img src="images/sci1.jpg">
             <img src="images/sci2.jpg">
-            <img src="images/sci3.jpg">
+            <img src="images/sci3.jpg"> -->
         </div>
     </div>
 </section>
-
-<script src="js/scripts.min.js"></script>
