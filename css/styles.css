@@ -3,14 +3,23 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
-    font: 18px/1.4 'Open Sans', sans-serif;;
+    font: 20px/1.5 'Open Sans', sans-serif;;
+    background: #F5F5F5;
+    min-height: 100%;
     margin: 0;
+    text-transform: lowercase;
+    border: 0.5rem solid #00E;
 }
 
 h1, h2, h3 {
     font-size: 1em;
-    margin: 1rem 0 0;
+    font-weight: normal;
+    margin: 0;
 }
 
 p {margin: 0 0 1rem;}
@@ -19,15 +28,14 @@ a {
     color: #00E;
     text-decoration: none;
     white-space: nowrap;
+    position: relative;
 }
 
-a:hover { text-decoration: line-through; }
-
-.full-wrap {
-    width: 100%;
+a:hover {
+    text-decoration: underline;
 }
 
-.med-wrap {
+.rap {
     width: 100%;
     max-width: 40rem;
     margin: 0 auto;
@@ -44,29 +52,98 @@ a:hover { text-decoration: line-through; }
     padding-right: 1em;
 }
 
+.heading,
+.sub-heading {
+    text-transform: uppercase;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
 .heading {
-    text-transform: uppercase;
-    background-color: #000;
-    color: white;
+    padding: 0.25em 0.5em;
     display: inline-block;
-    clear: both;
-    padding: 0 0.25em;
-    margin-bottom: 1rem;
-}
-
-.hero {
-    /*background-color: #f5f5f5;*/
-    margin-bottom: 2em;
-}
-
-.hero_title {
     font-size: 1.5em;
-    padding-top: 5rem;
-    text-transform: uppercase;
+    margin-top: -0.5rem;
+    background: black;
+    font-style: italic;
+    color: white;
 }
 
-/*mark {
+.foot {
+    display: block;
+    margin-top: 6rem;
+}
+
+.zzz {
+    display: none;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1000;
+}
+
+.zzz.is-visible {
+    display: block;
+}
+
+.zzz img {
+    display: none;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    max-width: 640px;
+    max-height: 100%;
+    z-index: 1001;
+    padding-top: 60px;
+}
+
+.zzz .active {display: block}
+
+.zzz .tabs {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1002;
+    background: black;
+    height: 60px;
+}
+
+.zzz .tabs li {
+    display: inline-block;
     background: black;
     color: white;
-    padding: 0 0.25em;
-}*/
+    padding: 0.25em 0.5em;
+    margin: 0 0.5em;
+    line-height: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.zzz .tabs li.active {
+    background: white;
+    color: black;
+}
+
+.zzz .close {
+    font-size: 0.75em;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-size: 38px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.zzz .close::after {
+    content: "×";
+}
