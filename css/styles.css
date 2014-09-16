@@ -70,7 +70,7 @@ a:hover {
 }
 
 /* MODAL (CLEAN ME) */
-.gallery {
+.werk {
     display: none;
     background: rgba(0,0,0,0.9);
     position: fixed;
@@ -78,11 +78,11 @@ a:hover {
     z-index: 1000;
 }
 
-.gallery.is-visible {
+.werk.is-visible {
     display: block;
 }
 
-.gallery > img {
+.werk > img {
     display: none;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -93,9 +93,9 @@ a:hover {
     padding-top: 60px;
 }
 
-.gallery .active {display: block}
+.werk .active {display: block}
 
-.gallery .tabs {
+.werk .tabs {
     position: relative;
     list-style: none;
     margin: 0 auto;
@@ -107,7 +107,7 @@ a:hover {
     height: 60px;
 }
 
-.gallery .tabs > li {
+.werk .tabs > li {
     display: inline-block;
     background: black;
     color: white;
@@ -118,12 +118,12 @@ a:hover {
     cursor: pointer;
 }
 
-.gallery .tabs > li.active {
+.werk .tabs > li.active {
     background: white;
     color: black;
 }
 
-.gallery .close {
+.werk .close {
     font-size: 0.75em;
     background: transparent;
     position: absolute;
@@ -138,8 +138,4 @@ a:hover {
     height: 60px;
     text-align: center;
     line-height: 60px;
-}
-
-.gallery .close::after {
-    content: "×";
 }
