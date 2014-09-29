@@ -15,6 +15,7 @@ body {
     margin: 0;
     text-transform: lowercase;
     border: 0.5rem solid #00E;
+
 }
 
 h1, h2, h3 {
@@ -28,7 +29,6 @@ p {margin: 0 0 1rem;}
 a {
     color: #00E;
     text-decoration: none;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -40,7 +40,11 @@ a:hover {
     width: 100%;
     max-width: 40rem;
     margin: 0 auto;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 2rem 2rem;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: rotate(-2deg) translateZ(0);
+    transform-origin: 0 100%;
+    transform: rotate(-2deg) translateZ(0);
 }
 
 .inline-list {
