@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* BASS */
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,23 +27,27 @@ h1, h2, h3 {
     margin: 0;
 }
 
-p {margin: 0 0 1rem;}
+p {margin: 0 0 1em;}
 
 a {
     color: #00E;
     text-decoration: none;
-    position: relative;
 }
 
 a:hover {
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
-.rap {
+.rapper {
     width: 100%;
     max-width: 40rem;
     margin: 0 auto;
     padding: 0 1rem 2rem 2rem;
+}
+
+/* UTIL */
+
+.tilt {
     -webkit-transform-origin: 0 100%;
     -webkit-transform: rotate(-2deg) translateZ(0);
     transform-origin: 0 100%;
@@ -57,24 +64,24 @@ a:hover {
     padding-right: 1em;
 }
 
-.heading,
-.sub-heading {
+.h,
+.sub-h {
     text-transform: uppercase;
     margin: 1rem 0;
     font-weight: bold;
+    font-style: italic;
 }
 
-.heading {
-    padding: 0.25em 0.5em;
+.h {
+    padding: 0.5em 0.5em 0.25em;
     display: inline-block;
     font-size: 1.5em;
     margin-top: -0.5rem;
-    background: black;
-    font-style: italic;
+    background: #00E;
     color: #F5F5F5;
 }
 
-/* MODAL (CLEAN ME) */
+/* WERK (CLEAN ME) */
 .werk {
     display: none;
     background: rgba(0,0,0,0.9);
