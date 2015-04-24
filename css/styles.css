@@ -7,18 +7,23 @@
 }
 
 html {
-    height: 100%;
-    background: #00E;
+    background: linear-gradient(#00c, #0cc, #0cc) fixed  no-repeat;
+    overflow: hidden;
 }
 
 body {
     font: 20px/1.5 'Open Sans', sans-serif;;
-    background: #F5F5F5;
-    min-height: 100%;
-    margin: 0;
+    background: white;
     text-transform: lowercase;
-    border: 0.5rem solid #00E;
-
+    margin: 0 ;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    overflow-y: scroll;
+    padding: 4rem 0 4rem;
+    z-index: 100;
 }
 
 h1, h2, h3 {
@@ -30,7 +35,7 @@ h1, h2, h3 {
 p {margin: 0 0 1em;}
 
 a {
-    color: #00E;
+    color: #00c;
     text-decoration: none;
 }
 
@@ -43,6 +48,26 @@ a:hover {
     max-width: 40rem;
     margin: 0 auto;
     padding: 0 1rem 2rem 2rem;
+}
+
+.rapper::after,
+.rapper::before {
+    content: '';
+    position: fixed;
+    right: 1rem;
+    left: 1rem;
+    height: 4rem;
+    z-index: 101;
+}
+
+.rapper::after {
+    bottom: 1rem;
+    background: linear-gradient(rgba(255,255,255,0), white);
+}
+
+.rapper::before {
+    top: 1rem;
+    background: linear-gradient(white, rgba(255,255,255,0));
 }
 
 /* UTIL */
@@ -69,16 +94,18 @@ a:hover {
     text-transform: uppercase;
     margin: 1rem 0;
     font-weight: bold;
-    font-style: italic;
 }
 
 .h {
-    padding: 0.5em 0.5em 0.25em;
+    padding: 0.25em 0.5em 0.25em;
     display: inline-block;
     font-size: 1.5em;
-    margin-top: -0.5rem;
-    background: #00E;
-    color: #F5F5F5;
+    /*margin-top: 1rem;*/
+    background: #00c;
+    color: white;
+    position: absolute;
+    z-index: 105;
+    top: -1rem;
 }
 
 /* WERK (CLEAN ME) */
