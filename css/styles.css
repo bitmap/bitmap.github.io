@@ -1,180 +1,177 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
-/* BASS */
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html {
-    background: linear-gradient(#00c, #0cc, #0cc) fixed  no-repeat;
-    overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font: 20px/1.5 'Open Sans', sans-serif;;
-    background: white;
-    text-transform: lowercase;
-    margin: 0 ;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    left: 1rem;
-    bottom: 1rem;
-    overflow-y: scroll;
-    padding: 4rem 0 4rem;
-    z-index: 100;
+  font: 20px/1.5 'Open Sans', sans-serif;
+  color: white;
+  text-transform: lowercase;
+  margin: 0;
+  background: #0CABE0;
+  background: linear-gradient(#0CABE0, #00CABE) fixed no-repeat;
 }
 
 h1, h2, h3 {
-    font-size: 1em;
-    font-weight: normal;
-    margin: 0;
+  margin: 0;
 }
 
-p {margin: 0 0 1em;}
+p { margin: 0 0 1rem; }
 
 a {
-    color: #00c;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+  color: #ff0;
+  text-decoration: none;
+  transition: 200ms ease;
+  font-weight: 700;
 }
 
 .rapper {
-    width: 100%;
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 0 1rem 2rem 2rem;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 2rem 4rem;
+  border-left: 4px solid white;
+  overflow: hidden;
 }
-
-.rapper::after,
-.rapper::before {
-    content: '';
-    position: fixed;
-    right: 1rem;
-    left: 1rem;
-    height: 4rem;
-    z-index: 101;
-}
-
-.rapper::after {
-    bottom: 1rem;
-    background: linear-gradient(rgba(255,255,255,0), white);
-}
-
-.rapper::before {
-    top: 1rem;
-    background: linear-gradient(white, rgba(255,255,255,0));
-}
-
-/* UTIL */
 
 .tilt {
-    -webkit-transform-origin: 0 100%;
-    -webkit-transform: rotate(-2deg) translateZ(0);
-    transform-origin: 0 100%;
-    transform: rotate(-2deg) translateZ(0);
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: rotate(-2deg) translateZ(0);
+  transform-origin: 0 100%;
+  transform: rotate(-2deg) translateZ(0);
+}
+
+.tilt-o {
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: rotate(2deg) translateZ(0);
+  transform-origin: 0 100%;
+  transform: rotate(2deg) translateZ(0);
 }
 
 .inline-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .inline-list > li {
-    display: inline-block;
-    padding-right: 1em;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .h,
 .sub-h {
-    text-transform: uppercase;
-    margin: 1rem 0;
-    font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem 0 0;
+  font-weight: 700;
 }
 
 .h {
-    padding: 0.25em 0.5em 0.25em;
-    display: inline-block;
-    font-size: 1.5em;
-    /*margin-top: 1rem;*/
-    background: #00c;
-    color: white;
-    position: absolute;
-    z-index: 105;
-    top: -1rem;
+  display: block;
+  font-size: 4rem;
+  line-height: 1;
+  color: white;
+  margin: 0;
+  margin-left: -5rem;
+  position: absolute;
+  top: -1rem;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  letter-spacing: 10px;
+  font-weight: 300;
 }
 
-/* WERK (CLEAN ME) */
+@media screen and (max-width: 800px) {
+
+  .h { 
+    margin: 0; 
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    position: static;
+    font-size: 2rem;
+  }
+
+  .inline-list {
+    position: static;
+    text-align: left;
+    margin: 0;
+  }
+
+  .inline-list li {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
+}
+
 .werk {
-    display: none;
-    background: rgba(0,0,0,0.9);
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1000;
+  display: none;
+  background: rgba(0,0,0,0.9);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
 }
 
 .werk.is-visible {
-    display: block;
+  display: block;
 }
 
 .werk > img {
-    display: none;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    margin: auto;
-    max-width: 640px;
-    max-height: 100%;
-    z-index: 1001;
-    padding-top: 60px;
+  display: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  max-width: 640px;
+  max-height: 100%;
+  z-index: 1001;
+  padding-top: 60px;
 }
 
 .werk > img.active {display: block}
 
 .werk .werk-tabs {
-    position: relative;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 1002;
-    background: black;
-    height: 60px;
+  position: relative;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1002;
+  background: black;
+  height: 60px;
 }
 
 .werk .werk-tabs > li {
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 0.25em 0.5em;
-    margin: 0 0.5em;
-    line-height: 60px;
-    height: 60px;
-    cursor: pointer;
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 0.25em 0.5em;
+  margin: 0 0.5em;
+  line-height: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
 .werk .werk-tabs > li.active {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
 }
 
 .werk .close {
-    font-size: 0.75em;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1003;
-    cursor: pointer;
-    color: white;
-    text-transform: uppercase;
-    font-size: 38px;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
+  font-size: 0.75em;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-size: 38px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
 }
