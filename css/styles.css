@@ -75,6 +75,7 @@ mark {
     -webkit-filter 400ms ease,
     filter 400ms ease,
     visibility 800ms,
+    -webkit-transform 400ms ease,
     transform 400ms ease;
 }
 
