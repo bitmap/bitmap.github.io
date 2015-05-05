@@ -57,71 +57,78 @@ mark {
 }
 
 .werk {
-  display: none;
-  background: rgba(0,0,0,0.9);
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1000;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    z-index: 10000;
 }
 
 .werk.is-visible {
-  display: block;
+    display: block;
 }
 
 .werk > img {
-  display: none;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  margin: auto;
-  max-width: 40em;
-  max-height: 100%;
-  z-index: 1001;
-  padding-top: 60px;
+    margin: auto;
+    max-height: 100%;
+    max-width: 40em;
+    padding-top: 60px;
+    z-index: 10001;
 }
 
-.werk > img.active {display: block}
+.werk > img.is-active {display: block}
 
-.werk .werk-tabs {
-  position: relative;
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 1002;
-  background: black;
-  height: 60px;
+.werk__tabs {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 10002;
 }
 
-.werk .werk-tabs > li {
-  display: inline-block;
-  background: black;
-  color: white;
-  padding: 0.25em 0.5em;
-  margin: 0 0.5em;
-  line-height: 60px;
-  height: 60px;
-  cursor: pointer;
+.werk__tabs > li {
+    display: inline-block;
+    z-index: 10003;
 }
 
-.werk .werk-tabs > li.active {
-  background: white;
-  color: black;
+.werk__tabs > li:hover,
+.werk__close:hover {
+    background: #333;
 }
 
-.werk .close {
-  font-size: 0.75em;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1003;
-  cursor: pointer;
-  color: white;
-  text-transform: uppercase;
-  font-size: 38px;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
+.werk__tabs > li.is-active {
+    background: white;
+    color: black;
+}
+
+.werk__close {
+    font-family: "Times New Roman";
+    font-size: 40px;
+    top: 0; left: 0;
+    z-index: 10003;
+}
+
+.werk__close,
+.werk__tabs,
+.werk__tabs li {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.werk__close,
+.werk__tabs li {
+    width: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.werk,
+.werk > img {
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: none;
+}
+
+.werk > img,
+.werk__close {
+    position: absolute;
 }
