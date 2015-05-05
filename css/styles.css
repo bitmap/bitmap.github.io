@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
 
 * {
   -webkit-box-sizing: border-box;
@@ -7,103 +8,52 @@
 }
 
 body {
-  font: 20px/1.5 'Open Sans', sans-serif;
-  color: white;
-  text-transform: lowercase;
-  margin: 0;
-  background: #0CABE0;
-  background: linear-gradient(#0CABE0, #00CABE) fixed no-repeat;
-}
-
-h1, h2, h3 {
+  font: 400 24px/1.4 PT Sans;
   margin: 0;
 }
 
-p { margin: 0 0 1rem; }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1, h2, h3, p, ul { margin: 0 0 1rem; }
+h1, h2, ul { text-transform: uppercase }
 
 a {
-  color: #ff0;
+  color: #CABE00;
   text-decoration: none;
-  transition: 200ms ease;
-  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+mark {
+  background: none;
+  color: #CABE00;
 }
 
 .rapper {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
-  padding: 2rem 1rem 2rem 4rem;
-  border-left: 4px solid white;
-  overflow: hidden;
-}
-
-.tilt {
-  -webkit-transform-origin: 0 100%;
-  -webkit-transform: rotate(-2deg) translateZ(0);
-  transform-origin: 0 100%;
-  transform: rotate(-2deg) translateZ(0);
-}
-
-.tilt-o {
-  -webkit-transform-origin: 0 100%;
-  -webkit-transform: rotate(2deg) translateZ(0);
-  transform-origin: 0 100%;
-  transform: rotate(2deg) translateZ(0);
-}
-
-.inline-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.inline-list > li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.h,
-.sub-h {
-  text-transform: uppercase;
-  margin: 1rem 0 0;
-  font-weight: 700;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .h {
+  font: 700 6em/1 Oswald;
   display: block;
-  font-size: 4rem;
-  line-height: 1;
-  color: white;
-  margin: 0;
-  margin-left: -5rem;
-  position: absolute;
-  top: -1rem;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  letter-spacing: 10px;
-  font-weight: 300;
+  font-size: 6rem;
+  margin: 0 0 0.5em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 40em) {
+  .h { font-size: 3em }
+}
 
-  .h { 
-    margin: 0; 
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    position: static;
-    font-size: 2rem;
-  }
-
-  .inline-list {
-    position: static;
-    text-align: left;
-    margin: 0;
-  }
-
-  .inline-list li {
-    display: inline-block;
-    margin: 0 1rem 0 0;
-  }
+@media screen and (max-width: 30em) {
+  .h { font-size: 2em }
 }
 
 .werk {
@@ -123,7 +73,7 @@ a {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   margin: auto;
-  max-width: 640px;
+  max-width: 40em;
   max-height: 100%;
   z-index: 1001;
   padding-top: 60px;
