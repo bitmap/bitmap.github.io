@@ -8,8 +8,9 @@
 }
 
 body {
-  font: 400 24px/1.4 PT Sans;
+  font: 400 24px/1.4 'PT Sans';
   margin: 0;
+  color: rgba(0,0,0,0.66)
 }
 
 ul {
@@ -42,7 +43,7 @@ mark {
 }
 
 .h {
-  font: 700 6em/1 Oswald;
+  font: 700 6em/1 'Oswald';
   display: block;
   font-size: 6rem;
   margin: 0 0 0.5em;
