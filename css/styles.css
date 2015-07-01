@@ -22,7 +22,7 @@ h1, h2, h3, p, ul { margin: 0 0 1rem; }
 h1, h2, ul { text-transform: uppercase }
 
 a {
-  color: #CABE00;
+  color: #00CABE;
   text-decoration: none;
 }
 
@@ -30,23 +30,23 @@ a:hover {
   text-decoration: underline;
 }
 
-mark {
-  background: none;
-  color: #CABE00;
-}
-
 .rapper {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
   padding: 2rem 1rem 2rem 1rem;
+  transform: rotate(-1.38deg);
 }
 
 .h {
   font: 700 6em/1 'Oswald';
+  color: #00CABE;
   display: block;
   font-size: 6rem;
   margin: 0 0 0.5em;
+  background: -webkit-linear-gradient(#CABE00, #00CABE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 40em) {
