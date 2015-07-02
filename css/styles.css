@@ -35,7 +35,6 @@ a:hover {
   max-width: 40rem;
   margin: 0 auto;
   padding: 2rem 1rem 2rem 1rem;
-  transform: rotate(-1.38deg);
 }
 
 .h {
@@ -47,6 +46,13 @@ a:hover {
   background: -webkit-linear-gradient(#CABE00, #00CABE);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.tilt-l {
+  transform: rotate(-1.38deg);
+}
+.tilt-r {
+  transform: rotate(1.38deg);
 }
 
 @media screen and (max-width: 40em) {
