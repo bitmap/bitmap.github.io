@@ -8,7 +8,8 @@
 
 ## Technical Skills
 - HTML5, CSS3, Less, Sass, PostCSS, JavaScript, jQuery
-- Node.js, npm, Grunt, Gulp, Git, GitHub, Mercurial
+- Node.js, npm, Grunt, Gulp, Mocha, Chai, PhantomJS
+- Git, GitHub, Mercurial
 - Experience with frameworks such as Angular, Backbone, and React
 - JS Templating engines including Jade, Handlebars and Dust
 - Object-oriented programming principles
