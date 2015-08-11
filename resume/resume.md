@@ -26,7 +26,8 @@
 - Created a better experience for users on a range of devices through responsive design
 - Maintained a robust theming architecture for clients utilizing Less
 - Organized client-side assets such as style sheets and sprites using npm and Grunt
-- Helped launch several Node.js applications
+- Helped launch several Node.js services and applications
+- A/B tested solutions to arrive at informed conclusions about UI/UX patterns
 - Lead advanced CSS and responsive design training for developers and designers
 - Helped standardize front-end development best practices and guidelines
 
