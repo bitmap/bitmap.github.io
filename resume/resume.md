@@ -1,0 +1,41 @@
+# Caleb Branson
+### Designer & Front-end Developer
+
+- (503) 308 - 3406
+- caleb.branson@gmail.com
+- https://calebbranson.com
+- https://github.com/bitmap
+
+## Technical Skills
+- HTML5, CSS3, Less, Sass, PostCSS, JavaScript, jQuery
+- Node.js, npm, Grunt, Gulp, Git, GitHub, Mercurial
+- Experience with frameworks such as Angular, Backbone, and React
+- JS Templating engines including Jade, Handlebars and Dust
+- Object-oriented programming principles
+- Photoshop, Illustrator, InDesign
+- UX and UI design, typography, grid systems, and responsive design
+- Prepress, proofing, and color correction techniques
+
+## Experience
+
+### Front-End Developer
+#### WebMD (Feb 2012 - Present)
+- Developed a UI pattern library for product development and design teams
+- Converted legacy components and apps to modern semantic HTML5, CSS3, and JS
+- Created a better experience for users on a range of devices through responsive design
+- Maintained a robust theming architecture for clients utilizing Less
+- Organized client-side assets such as style sheets and sprites using npm and Grunt
+- Helped launch several Node.js applications
+- Lead advanced CSS and responsive design training for developers and designers
+- Helped standardize front-end development best practices and guidelines
+
+
+### UX Designer
+#### WebMD (Aug 2011 - Feb 2012)
+
+- Helped design the user experience for WebMD’s Personal Health Manager applications.
+- Wire framing, mock-ups, usability testing, and prototyping interface components in HTML and CSS.
+
+## Education
+### Bachelor of Fine Arts Graphic Design
+#### Eastern Illinois University (2011)
