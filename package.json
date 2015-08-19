@@ -1,7 +1,6 @@
 {
   "name": "bitmap.github.io",
   "version": "1.0.0",
-  "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-inline": "^0.0.12",
