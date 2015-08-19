@@ -1,0 +1,18 @@
+{
+  "name": "bitmap.github.io",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-inline": "^0.0.12",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitmap/bitmap.github.io.git"
+  },
+  "license": "UNLICENSED"
+}
