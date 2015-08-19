@@ -14,5 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/bitmap/bitmap.github.io.git"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "private": true
 }
