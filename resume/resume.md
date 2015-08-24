@@ -10,9 +10,8 @@
 - HTML5, CSS3, Less, Sass, PostCSS, JavaScript, jQuery
 - Node.js, npm, Grunt, Gulp, Mocha, Chai, PhantomJS
 - Git, GitHub, Mercurial
-- Experience with frameworks such as Angular, Backbone, and React
-- JS Templating engines including Jade, Handlebars and Dust
-- Object-oriented programming principles
+- Experience with MVC frameworks such as Angular and React
+- JS templating engines including Handlebars and Dust
 - Photoshop, Illustrator, InDesign
 - UX and UI design, typography, grid systems, and responsive design
 - Prepress, proofing, and color correction techniques
@@ -22,7 +21,7 @@
 ### Front-End Developer
 #### WebMD (Feb 2012 - Present)
 - Developed a UI pattern library for product development and design teams
-- Converted legacy components and apps to modern semantic HTML5, CSS3, and JS
+- Converted legacy components and apps to modern HTML5, CSS3, and JS
 - Created a better experience for users on a range of devices through responsive design
 - Maintained a robust theming architecture for clients utilizing Less
 - Organized client-side assets such as style sheets and sprites using npm and Grunt
@@ -35,7 +34,7 @@
 ### UX Designer
 #### WebMD (Aug 2011 - Feb 2012)
 
-- Helped design the user experience for WebMD’s Personal Health Manager applications.
+- Helped design the UX/UI for WebMD’s Personal Health Manager applications.
 - Wire framing, mock-ups, usability testing, and prototyping interface components in HTML and CSS.
 
 ## Education
