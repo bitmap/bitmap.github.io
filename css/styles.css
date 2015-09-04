@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:700|PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans);
 
 * {
   box-sizing: border-box;
@@ -17,6 +17,7 @@ ul {
 
 h1, h2, h3, p, ul { margin: 0 0 1rem; }
 h1, h2, ul { text-transform: uppercase }
+h2 {letter-spacing: 10px;}
 
 a {
   color: #00CABE;
@@ -35,7 +36,7 @@ a:hover {
 }
 
 .h {
-  font: 700 6em/1 'Oswald';
+  font: 6em/1 'Abril Fatface';
   color: #00CABE;
   display: block;
   font-size: 6rem;
@@ -43,6 +44,18 @@ a:hover {
   background: -webkit-linear-gradient(#CABE00, #00CABE);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1em;
+  letter-spacing: 2px;
+}
+
+.r {
+  text-align: right;
+  display: block;
+}
+
+.amp {
+  /*font-family: 'Adobe Caslon Pro';*/
+  /*font-style: italic;*/
 }
 
 .tilt-l {
@@ -164,4 +177,154 @@ a:hover {
 .bokeh > img,
 .bokeh__close {
   position: absolute;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes widen {
+  0% {
+    width: 0;
+    border-width: 2px;
+    /*left: 40rem;*/
+  }
+  100% {
+    width: 40rem;
+    border-width: 9px;
+    /*left: 20rem;*/
+  }
+  /*100% {
+    width: 0;
+    border-width: 2px;
+    left: 40rem;
+  }*/
+}
+@keyframes widen {
+  0% {
+    width: 627px;
+    /*border-width: 2px;*/
+    /*left: 40rem;*/
+  }
+  50% {
+    width: 40rem;
+    /*border-width: 9px;*/
+    /*left: 20rem;*/
+  }
+  100% {
+    width: 627px;
+    /*border-width: 2px;*/
+    /*left: 40rem;*/
+  }
+}
+
+.bloom {
+  height: 40rem;
+  width: 40rem;
+  /*-webkit-animation: rotate 5s linear infinite;*/
+          /*animation: rotate 1s linear;*/
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+          transform-origin: 50%;
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  bottom: 0;
+  right: 0;
+  margin: 3rem auto;
+  /*z-index: 1;*/
+}
+.bloom li {
+  width: 20rem;
+  height: 40rem;
+  /*-webkit-animation: widen 20s linear infinite ;*/
+          /*animation: widen 2s ease infinite ;*/
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+@media screen and (max-width: 40rem) {
+  .bloom {display: none}
+}
+.bloom li:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  border-color: #CABE00;
+}
+.bloom li:nth-child(2) {
+  -webkit-transform: rotate(18deg);
+      -ms-transform: rotate(18deg);
+          transform: rotate(18deg);
+  border-color: #00CABE;
+}
+.bloom li:nth-child(3) {
+  -webkit-transform: rotate(36deg);
+      -ms-transform: rotate(36deg);
+          transform: rotate(36deg);
+  border-color: #CABE00;
+}
+.bloom li:nth-child(4) {
+  -webkit-transform: rotate(54deg);
+      -ms-transform: rotate(54deg);
+          transform: rotate(54deg);
+  border-color: #00CABE;
+}
+.bloom li:nth-child(5) {
+  -webkit-transform: rotate(72deg);
+      -ms-transform: rotate(72deg);
+          transform: rotate(72deg);
+  border-color: #CABE00;
+}
+.bloom li:nth-child(6) {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border-color: #00CABE;
+}
+.bloom li:nth-child(7) {
+  -webkit-transform: rotate(108deg);
+      -ms-transform: rotate(108deg);
+          transform: rotate(108deg);
+  border-color: #CABE00;
+}
+.bloom li:nth-child(8) {
+  -webkit-transform: rotate(126deg);
+      -ms-transform: rotate(126deg);
+          transform: rotate(126deg);
+  border-color: #00CABE;
+}
+.bloom li:nth-child(9) {
+  -webkit-transform: rotate(144deg);
+      -ms-transform: rotate(144deg);
+          transform: rotate(144deg);
+  border-color: #CABE00;
+}
+.bloom li:nth-child(10) {
+  -webkit-transform: rotate(162deg);
+      -ms-transform: rotate(162deg);
+          transform: rotate(162deg);
+  border-color: #00CABE;
 }
