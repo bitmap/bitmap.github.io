@@ -7,7 +7,7 @@
 body {
   font: 400 24px/1.4 'PT Serif';
   margin: 0;
-  color: #575757;
+  color: black;
 }
 
 ul {
@@ -16,16 +16,26 @@ ul {
 }
 
 h1, h2, h3, p, ul { margin: 0 0 1rem; }
-h1, h2{ text-transform: uppercase; font-family: 'Abril Fatace'}
-h2 {letter-spacing: 5px;}
+h1, h2, h3 {
+  font-family: 'Abril Fatface';
+  font-weight: 400;
+}
+
+h2 {margin-top: 1em}
 
 a {
-  color: #00CABE;
-  text-decoration: none;
+  color: blue;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+hr {
+  margin: 0.5em 0;
+  border: none;
+  border-top: 1px solid black;
 }
 
 .rapper {
@@ -36,39 +46,19 @@ a:hover {
 }
 
 .h {
-  font: 400 6em/1 'Abril Fatface';
-  color: #00CABE;
-  display: block;
-  font-size: 6rem;
-  margin: 0 auto 0.5em;
-  background: -webkit-linear-gradient(#CABE00, #00CABE);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.5em;
-  font-weight: normal;
-  text-transform: NONE;
+  font-size: 5rem;
+  line-height: 1.1;
+  margin: 0 0 1em;
 }
 
-.r {
-  text-align: right;
-  display: block;
-}
-
-.tilt-l {
-  transform: rotate(-1.38deg);
-}
-.tilt-r {
-  transform: rotate(1.38deg);
-}
+.h div {font-size: 85%;}
 
 @media screen and (max-width: 40em) {
   .h { font-size: 3em; max-width: 30rem; }
-  .bloom {display: none}
 }
 
 @media screen and (max-width: 30em) {
-  .h { font-size: 1.8em; max-width: 20rem; }
-  h2 {font-size: 1em;}
+  .h { font-size: 2em; max-width: 20rem; }
 }
 
 .bokeh {
@@ -175,85 +165,4 @@ a:hover {
 .bokeh > img,
 .bokeh__close {
   position: absolute;
-}
-
-.bloom {
-  height: 40rem;
-  width: 40rem;
-  position: absolute;
-  top: 0;
-  left: 20rem;
-  bottom: 0;
-  right: 0;
-  margin: 2rem auto;
-}
-.bloom li {
-  width: 20rem;
-  height: 40rem;
-  position: absolute;
-  border: 2px solid;
-  box-sizing: border-box;
-  border-radius: 50%;
-  mix-blend-mode: screen;
-}
-
-.bloom li:nth-child(1) {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  border-color: #CABE00;
-}
-.bloom li:nth-child(2) {
-  -webkit-transform: rotate(18deg);
-      -ms-transform: rotate(18deg);
-          transform: rotate(18deg);
-  border-color: #00CABE;
-}
-.bloom li:nth-child(3) {
-  -webkit-transform: rotate(36deg);
-      -ms-transform: rotate(36deg);
-          transform: rotate(36deg);
-  border-color: #CABE00;
-}
-.bloom li:nth-child(4) {
-  -webkit-transform: rotate(54deg);
-      -ms-transform: rotate(54deg);
-          transform: rotate(54deg);
-  border-color: #00CABE;
-}
-.bloom li:nth-child(5) {
-  -webkit-transform: rotate(72deg);
-      -ms-transform: rotate(72deg);
-          transform: rotate(72deg);
-  border-color: #CABE00;
-}
-.bloom li:nth-child(6) {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  border-color: #00CABE;
-}
-.bloom li:nth-child(7) {
-  -webkit-transform: rotate(108deg);
-      -ms-transform: rotate(108deg);
-          transform: rotate(108deg);
-  border-color: #CABE00;
-}
-.bloom li:nth-child(8) {
-  -webkit-transform: rotate(126deg);
-      -ms-transform: rotate(126deg);
-          transform: rotate(126deg);
-  border-color: #00CABE;
-}
-.bloom li:nth-child(9) {
-  -webkit-transform: rotate(144deg);
-      -ms-transform: rotate(144deg);
-          transform: rotate(144deg);
-  border-color: #CABE00;
-}
-.bloom li:nth-child(10) {
-  -webkit-transform: rotate(162deg);
-      -ms-transform: rotate(162deg);
-          transform: rotate(162deg);
-  border-color: #00CABE;
 }
