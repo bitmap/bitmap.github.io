@@ -35,31 +35,33 @@ a:hover {
 hr {
   margin: 0.5em 0;
   border: none;
-  border-top: 1px solid black;
+  border-top: 1px solid white;
 }
 
 .rapper {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .h {
-  font-size: 5rem;
+  font-size: 2em;
+  font-size: 5vmin;
   line-height: 1.1;
-  margin: 0 0 1em;
+  margin: 0 0 1rem;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
 }
 
+@media screen and (max-width: 640px) {
+  .h {font-size: 24px;}
+}
+
+.h h1 {margin: auto;}
 .h div {font-size: 85%;}
-
-@media screen and (max-width: 40em) {
-  .h { font-size: 3em; max-width: 30rem; }
-}
-
-@media screen and (max-width: 30em) {
-  .h { font-size: 2em; max-width: 20rem; }
-}
 
 .bokeh {
   background: rgba(0,0,0,0.75);
@@ -99,8 +101,8 @@ hr {
 
 .bokeh > img {
   margin: auto;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 80vh;
+  max-width: 80vw;
   z-index: 10001;
   box-shadow: 0 5px 25px -5px rgba(0,0,0,0.5);
 }
