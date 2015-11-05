@@ -3,36 +3,48 @@
 }
 
 body {
-  font: 400 24px/1.4 'Avenir Next', serif;
+  font: 400 24px/1.24 'PT Serif', serif;
   font-weight: 400;
   margin: 0;
   color: #111;
   background: #eee;
-  text-transform: lowercase
 }
 
 h1, h2, h3, p, ul { margin: 0 0 1rem; }
 h1, h2, h3 {
-  font-weight: 400;
+  font-weight: 100;
+  font-family: 'Avenir Next';
+  line-height: 1.5;
 }
 
-h2 {margin-top: 1em}
+h2 {
+  margin-top: 4rem;
+  font-weight: 100;
+}
+
+h3 {
+  font-weight: 400;
+}
 
 ul {
   list-style: none;
   padding: 0;
 }
 
+ul li {
+  margin: 1rem 1rem 1rem 0;
+  display: inline-block;
+}
+
 a {
-  color: #111;
+  color: #0CABE0;
   text-decoration: none;
-  border-bottom: 2px solid rgba(0,0,0,0.25);
   display: inline-block;
   line-height: 1;
 }
 
 a:hover {
-  border-color: #cabe00;
+  text-decoration: underline;
 }
 
 hr {
@@ -44,6 +56,7 @@ hr {
 .amp {
   font-family: 'Baskerville';
   font-style: italic;
+  text-transform: lowercase;
 }
 
 .c,.a,.b,.e {
@@ -71,17 +84,20 @@ hr {
 }
 
 .h {
-  font-size: 5vmin;
+  font-size: 6vmin;
   margin: 0 0 1rem;
   padding: 1rem;
   height: 100vh;
   background: #111;
-  color: #eee;
+  color: #666;
   display: flex;
+  letter-spacing: -3px;
 }
 
 .h > h1 {
   margin: auto;
+  width: 100%;
+  max-width: 80vmin;
 }
 
 .h a {
@@ -91,7 +107,7 @@ hr {
 }
 
 .h a:hover {
-  border-color: #cabe00;
+  border-color: #0CABE0;
 }
 
 @keyframes intro {
@@ -127,6 +143,8 @@ hr {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   visibility: hidden;
+  /*-webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);*/
 }
 
 .bokeh,
