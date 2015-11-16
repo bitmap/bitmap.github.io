@@ -3,7 +3,7 @@
 }
 
 body {
-  font: 400 24px/1.24 'PT Serif', serif;
+  font: 400 24px/1.38 'PT Serif', serif;
   font-weight: 400;
   margin: 0;
   color: #111;
@@ -91,13 +91,14 @@ hr {
   background: #111;
   color: #666;
   display: flex;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
 }
 
 .h > h1 {
   margin: auto;
   width: 100%;
   max-width: 80vmin;
+  line-height: 1.38;
 }
 
 .h a {
