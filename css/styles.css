@@ -52,10 +52,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.h {
+  text-align: center;
+}
 .c {
   text-transform: uppercase;
-  text-align: center;
-  font-size: 17vmin;
+  font-size: 15.5vmin;
   position: relative;
   letter-spacing: .5rem;
   color: rgba(0,202,202,0.8);
@@ -101,7 +103,6 @@ a:hover {
 }
 
 .h {
-  font-size: 4vmin;
   margin: 0 0 1rem;
   padding: 1rem;
   color: #666;
