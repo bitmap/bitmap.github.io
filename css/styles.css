@@ -1,24 +1,33 @@
+@font-face {
+  font-family: 'Pinopolis';
+  src: url('fonts/Pinopolis.otf');
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font: 400 24px/1.38 'PT Serif', serif;
+  font: 400 24px/1.5 'Pinopolis', serif;
   font-weight: 400;
   margin: 0;
-  color: #111;
-  background: #eee;
+  color: rgba(0,0,0,0.8);
+  background: #fafafa;
+  /*background: #fff url('../images/noize.png');*/
+  letter-spacing: 1px;
 }
 
 h1, h2, h3, p, ul { margin: 0 0 1rem; }
 h1, h2, h3 {
-  font-weight: 100;
-  font-family: 'Avenir Next';
+  font-weight: normal;
+  /*font-family: 'Pinopolis';*/
   line-height: 1.5;
+  color: rgba(0,0,0,0.8);
+  text-transform: uppercase;
 }
 
 h2 {
-  margin-top: 4rem;
+  margin-top: 8rem;
   font-weight: 100;
 }
 
@@ -31,13 +40,9 @@ ul {
   padding: 0;
 }
 
-ul li {
-  margin: 1rem 1rem 1rem 0;
-  display: inline-block;
-}
-
 a {
-  color: #0CABE0;
+  /*color: #DA35A2;*/
+  color: rgba(0,202,202,0.8);
   text-decoration: none;
   display: inline-block;
   line-height: 1;
@@ -47,68 +52,82 @@ a:hover {
   text-decoration: underline;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid transparent;
-  animation: intro 800ms ease forwards;
-}
-
-.amp {
-  font-family: 'Baskerville';
-  font-style: italic;
-  text-transform: lowercase;
-}
-
-.c,.a,.b,.e {
-  display: block;
-}
-
 .c {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 17vmin;
+  position: relative;
+  letter-spacing: .5rem;
+  color: rgba(0,202,202,0.8);
+  position: relative;
+  line-height: 1.5;
+}
+
+.in1 {
+  display: block;
   animation: intro 800ms ease forwards;
 }
-.a {
-  animation: intro 1100ms ease forwards;
+.in2 {
+  display: block;
+  animation: intro 1200ms ease forwards;
 }
-.b {
+  /*color: rgba(0,0,0,0.8);
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-size: 50%;*/
+/*
+}*/
+/*.b {
   animation: intro 1400ms ease forwards;
+  color: rgba(0,0,0,0.8);
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-size: 50%;
 }
 .e {
   animation: intro 1700ms ease forwards;
+}*/
+
+.block {
+  min-height: 100vh;
+  display: flex;
 }
 
-.rapper {
+.cont {
+  margin: auto;
   width: 100%;
   max-width: 40rem;
-  margin: 0 auto;
-  padding: 0 1rem 4rem 1rem;
+  padding: 8rem 2rem;
 }
 
 .h {
-  font-size: 6vmin;
+  font-size: 4vmin;
   margin: 0 0 1rem;
   padding: 1rem;
-  height: 100vh;
-  background: #111;
   color: #666;
-  display: flex;
-  letter-spacing: -2px;
+  background-image: url('images/bg.gif');
+  background-size: cover;
+  background-position: 50%;
 }
 
 .h > h1 {
   margin: auto;
   width: 100%;
-  max-width: 80vmin;
-  line-height: 1.38;
+  line-height: 1;
 }
 
-.h a {
-  color: #eee;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(255,255,255,0.25);
-}
+@media screen and (max-width: 767px) {
+  .h > h1 {
+    margin: auto 0;
+  }
 
-.h a:hover {
-  border-color: #0CABE0;
+  .h {
+    background-position: 50%;
+  }
+
+  .c {
+    left: 0;
+  }
 }
 
 @keyframes intro {
