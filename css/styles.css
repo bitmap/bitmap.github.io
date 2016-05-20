@@ -70,9 +70,22 @@ a:hover {
   text-decoration: underline;
 }
 
+.h {
+  margin: 0;
+  padding: 0;
+  color: #666;
+  line-height: 1.5;
+  background-image: url('/images/bg.gif');
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  /*mix-blend-mode: luminosity;*/
+  height: 100vh;
+}
+
 .h1 {
   color: white;
-  font-size: 15vmin;
+  font-size: 14.5vmin;
   padding: 1em;
   position: relative;
   position: relative;
@@ -141,29 +154,13 @@ a:hover {
   padding: 8rem 2rem;
 }
 
-.h {
-  margin: 0;
-  padding: 0;
-  color: #666;
-  line-height: 1.5;
-  background-image: url('/images/bg.gif');
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  /*mix-blend-mode: luminosity;*/
-  height: 100vh;
-  text-align: justify;
-}
-
-@media screen and (max-width: 767px) {
-  .h > h1 {
-    margin: auto 0;
+@media screen and (max-width: 640px) {
+  h2 {
+    font-size: 48px;
   }
-  .h {
-    background-position: 50%;
-  }
-  .h1 {
-    left: 0;
+  .work-title {
+    position: static;
+    max-width: 100%;
   }
 }
 
