@@ -1,0 +1,49 @@
+<html>
+<style media="screen">
+  body, html {
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+  }
+
+  body {
+    background: black;
+    font-family: monospace;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+  }
+
+  #gamepadDisplay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    background: rgba(0,0,0,0.2);
+    color: white;
+    padding: 20px;
+    z-index: 100;
+  }
+
+  #game {
+    background: black;
+    position: absolute;
+    display: block;
+  }
+</style>
+
+
+  <body>
+    <div id="intro"></div>
+
+    <div id="gamepadPrompt"></div>
+    <div id="gamepadDisplay">No Gamepad Connected! Connect a controller and refresh the page.</div>
+
+
+    <canvas id="game"></canvas>
+
+    <script src="bundle.js"></script>
+    <script src="ui.js"></script>
+
+
+  </body>
+</html>
