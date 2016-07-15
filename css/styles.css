@@ -91,6 +91,7 @@ a:hover {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .work > li {
