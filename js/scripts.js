@@ -63,9 +63,7 @@
 
     tabClickHandler: function(tab, img) {
       tab.addEventListener('click', function() {
-        if (tab.getAttribute('data-index') === img.getAttribute('data-index')) {
-          bokeh.setActive(tab, img);
-        }
+        bokeh.setActive(tab, img);
       });
     },
 
