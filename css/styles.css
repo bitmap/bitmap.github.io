@@ -19,7 +19,7 @@
 }
 
 html {
-  font: 400 21px/1.4 'Pinopolis', sans-serif;
+  font: 400 21px/1.4 'Pinopolis', monospace;
 }
 
 body {
@@ -27,6 +27,7 @@ body {
   color: #0A0F0D;
   background: #fafafa url(/images/noize.png);
   letter-spacing: -0.5px;
+  text-transform: lowercase;
 }
 
 @media screen and (max-width: 600px) {
