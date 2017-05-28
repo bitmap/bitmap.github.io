@@ -30,17 +30,17 @@
       <a class="work_item" href="https://cincodesign.com" target="_blank">
         <img src="images/cinco2.gif" class="thmb">
         <h3>Cinco Design</h3>
-        <p>Creative intelligence <br>for pioneering brands</p>
+        <p>Creative Intelligence <br>for Pioneering Brands</p>
       </a>
       <a class="work_item" href="https://nextbit.com" target="_blank">
         <img src="images/nextbit.gif" class="thmb">
         <h3>Nextbit</h3>
-        <p>Cloud first</p>
+        <p>Cloud First</p>
       </a>
       <a class="work_item" href="https://stellar.aero" target="_blank">
         <img src="images/stella.gif" class="thmb">
         <h3>Stellar</h3>
-        <p>Skies wide open</p>
+        <p>Skies Wide Open</p>
       </a>
     </div>
   </section>
@@ -63,7 +63,7 @@
         <h3>dudel</h3>
         <p>force-touch/gamepad drawing app<br>(iPhone 6S or Xbox)</p>
       </a>
-      <a class="work_item" href="demos/pxlfxr/index.html" target="_blank">
+      <a class="work_item" href="/demos/pxlfxr/" target="_blank">
         <img src="images/pxlfxr.gif" class="thmb">
         <h3>pxlfxr</h3>
         <p>video > canvas <br>pixel manipulator<br></p>
@@ -85,12 +85,16 @@
     <h2>more code 😎</h2>
     <ul>
       <li>
+        <a href="https://github.com/bitmap/uno" target="_blank">uno</a>
+        <p>static site starter kit [<a href="http://uno.cinco.io/" target="_blank">see docs</a>]</p>
+      </li>
+      <li>
         <a href="https://github.com/bitmap/cambro" target="_blank">cambro</a>
         <p>webcam lightness sensor</p>
       </li>
       <li>
-        <a href="https://github.com/bitmap/uno" target="_blank">uno</a>
-        <p>static site starter kit (<a href="http://uno.cinco.io/" target="_blank">see docs</a>)</p>
+        <a href="https://github.com/bitmap/pxlfxr" target="_blank">pxlfxr_webcam</a>
+        <p>pxlfx yourself (webcam, mic -> canvas) [<a href="https://pxlxr-bjmifzuodp.now.sh/" taget="_blank">see demo</a>]</p>
       </li>
       <li>
         <a href="https://github.com/bitmap/bokeh" target="_blank">bokeh</a>
@@ -116,7 +120,7 @@
     <ul>
       <li><a href="mailto:cabebranson@gmail.com" target="_blank">email</a></li>
       <li><a href="http://github.com/bitmap" target="_blank">github</a></li>
-      <!-- <li><a href="https://www.npmjs.com/~cabe">npm</a></li> -->
+      <li><a href="https://www.npmjs.com/~cabe">npm</a></li>
       <li><a href="http://codepen.io/bitmap" target="_blank">codepen</a></li>
       <li><a href="http://instagram.com/cabe.branson" target="_blank">insta</a></li>
       <li><a href="http://linkedin.com/in/calebbranson" target="_blank">linkedin</a></li>
@@ -137,6 +141,7 @@
 <div id="glitch" class="bokeh">
   <img data-src="images/glitch-neue-1.png">
   <img data-src="images/smearrrrr.png">
+  <img data-src="images/smear2.gif">
   <img data-src="images/glitch-neue-2.png">
   <img data-src="images/glitch-neue-3.gif">
   <img data-src="images/glitch-neue-4.gif">
@@ -153,4 +158,6 @@
   <img data-src="images/sci3.jpg">
 </div>
 
-<script src="js/scripts.js"></script>
+<script type="text/javascript">
+!function(){"use strict";function e(e,t,i){for(var a=0;a<e.length;a++)t.call(i,e[a])}function t(e){return document.createElement(e)}var i=document.querySelector(".bokeh-blur"),a={init:function(e){var t,i,a=this;e.setAttribute("data-bokeh",!0),t=e.querySelectorAll("img"),a.createTabs(e,t),a.createCloseButton(e),i=e.querySelectorAll(".bokeh__tabs > li"),a.setActive(i[0],t[0])},createTabs:function(i,c){i.appendChild(t("ul")).className="bokeh__tabs";var s,n=i.querySelector(".bokeh__tabs",i);e(c,function(e,i){s=t("li"),n.appendChild(s),a.tabClickHandler(s,e)})},createCloseButton:function(e){e.appendChild(t("div")).className="bokeh__close";var a=e.querySelector(".bokeh__close",e);a.innerHTML="CLOSE",a.addEventListener("click",function(){e.classList.remove("is-visible"),i&&i.classList.remove("has-blur")})},tabClickHandler:function(e,t){e.addEventListener("click",function(){a.setActive(e,t)})},setActive:function(e,t){function i(e){return e.parentNode.querySelector(".is-active")}var a="is-active";null!==i(e)&&i(e).classList.remove(a),null!==i(t)&&i(t).classList.remove(a),t.hasAttribute("data-src")&&(t.setAttribute("src",t.getAttribute("data-src")),t.removeAttribute("data-src")),e.classList.add(a),t.classList.add(a)},showModal:function(e){var t=e.getAttribute("href").replace("#",""),c=document.getElementById(t);e.addEventListener("click",function(){c.classList.add("is-visible"),i&&i.classList.add("has-blur"),c.getAttribute("data-bokeh")||a.init(c)})}},c=document.querySelectorAll(".bokeh-link");e(c,function(e){a.showModal(e)})}();
+</script>

@@ -39,6 +39,7 @@ body {
   background-size: 6px 8px;
   letter-spacing: -0.5px;
   overflow-x: hidden;
+  text-transform: lowercase;
 }
 
 @media screen and (max-width: 600px) {
