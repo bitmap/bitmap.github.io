@@ -5,17 +5,18 @@
 
 * {
   box-sizing: border-box;
+  text-align: center;
 }
 
 .work::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 0;
-  height: 4px;
+  height: 5px;
 }
 
 .work::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: #66F;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #66F, #F66);
 }
 
 .tiltl {
@@ -82,6 +83,48 @@ h1 {
   }
 }
 
+.hdr {
+  perspective: 800px;
+  white-space: nowrap;
+}
+
+.hdr span {
+  /*position: absolute;*/
+  display: inline-block;
+  transform-style: preserve-3d;
+  transform-origin: 50%;
+  transition-property: text-shadow, color;
+  transition-duration: 1s;
+  /*text-shadow:
+    0px 0px 0 #FFF,
+    0px 0px 0 #FFF,
+    0px 0px 0 #FFF,
+    0px 0px 0 #FFF,
+    0px 0px 0 #FFF,
+    0px 0px 0 #FFF;*/
+
+}
+
+.hdr span.spin {
+  transition-property: text-shadow, color, transform;
+  transform: rotateY( 360deg );
+}
+
+.hdr span.color {
+  color: #F66;
+  /*text-shadow:
+    -2px -2px 2px #66F,
+    -2px 0px 2px #66F,
+    0px -2px 2px #66F,
+    0px 2px 2px #66F,
+    2px 0px 2px #66F,
+    2px 2px 2px #66F;*/
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+
 h2 {
   margin: 2rem 0 1rem;
   display: block;
@@ -95,12 +138,17 @@ ul {
 
 a {
   color: #66F;
+  transition: color 200ms;
   text-decoration: none;
 }
 
 a:hover {
-  color: #66F;
-  text-decoration: underline;
+  color: #F66;
+  background-image: linear-gradient(90deg, #66F, #F66, #66F);
+  background-size: 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bgMover 1s linear infinite;
 }
 
 img {
@@ -131,17 +179,18 @@ header, section {
   background-image: repeating-linear-gradient(-45deg, #f5f5f5, #f5f5f5 2px, transparent 3px, transparent 7px);
   background-size: 6px 8px;
   padding: 2rem;
-  margin: 0 -2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   position: relative;
+  animation: bgMover 1s linear infinite;
 }
 
 .work_overflow {
   overflow: hidden;
-
 }
 
 .work_overflow::after {
@@ -151,6 +200,7 @@ header, section {
   top: 0; bottom: 0;
   background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,1));
   width: 200px;
+  display: none;
 }
 .work_overflow::before {
   content: '';
@@ -160,6 +210,7 @@ header, section {
   background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0));
   width: 100px;
   z-index: 100;
+  display: none;
 }
 
 .tiltl.work_overflow::after {
@@ -180,11 +231,11 @@ header, section {
 }
 
 .work_item {
-  flex: auto;
+  flex: 1;
   flex-flow: row;
   min-width: 18rem;
   max-width: 18rem;
-  padding: 0 2rem 0 0;
+  padding: 0 1rem;
   overflow: hidden;
   transform: scale(1);
   transition: 200ms ease;
@@ -203,11 +254,23 @@ header, section {
   color: black;
 }
 
+@keyframes bgMover {
+  from {background-position: 0% 100%;}
+  to {background-position: 100% 100%;}
+}
+
 .work_item:hover {
   text-decoration: none;
   transform: scale(1.05);
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
+  background-image: linear-gradient(90deg, #66F, #F66, #66F);
+  background-size: 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bgMover 1s linear infinite;
 }
+
+
 
 .work_item:hover h3 {
   color: #66F;
