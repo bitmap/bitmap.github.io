@@ -90,7 +90,7 @@
         <p>Based CSS framework, because why not [<a href="/based.css" target="_blank">learn more</a>]</p>
       </li>
       <li>
-        <a href="https://github.com/bitmap/uno" target="_blank">uno</a>
+        <a href="https://github.com/cincodesign/uno" target="_blank">uno</a>
         <p>gulp-based static site generator [<a href="http://uno.cinco.io/" target="_blank">see docs</a>]</p>
       </li>
       <li>
@@ -160,4 +160,84 @@
 </div>
 
 <script type="text/javascript">
-!function(){"use strict";function e(e,t,r){for(var n=0;n<e.length;n++)t.call(r,e[n])}function t(e){return document.createElement(e)}var r=document.querySelector(".bokeh-blur"),n={init:function(e){var t,r,n=this;e.setAttribute("data-bokeh",!0),t=e.querySelectorAll("img"),n.createTabs(e,t),n.createCloseButton(e),r=e.querySelectorAll(".bokeh__tabs > li"),n.setActive(r[0],t[0])},createTabs:function(r,a){r.appendChild(t("ul")).className="bokeh__tabs";var s,c=r.querySelector(".bokeh__tabs",r);e(a,function(e,r){s=t("li"),c.appendChild(s),n.tabClickHandler(s,e)})},createCloseButton:function(e){e.appendChild(t("div")).className="bokeh__close";var n=e.querySelector(".bokeh__close",e);n.innerHTML="CLOSE",n.addEventListener("click",function(){e.classList.remove("is-visible"),r&&r.classList.remove("has-blur")})},tabClickHandler:function(e,t){e.addEventListener("click",function(){n.setActive(e,t)})},setActive:function(e,t){function r(e){return e.parentNode.querySelector(".is-active")}var n="is-active";null!==r(e)&&r(e).classList.remove(n),null!==r(t)&&r(t).classList.remove(n),t.hasAttribute("data-src")&&(t.setAttribute("src",t.getAttribute("data-src")),t.removeAttribute("data-src")),e.classList.add(n),t.classList.add(n)},showModal:function(e){var t=e.getAttribute("href").replace("#",""),a=document.getElementById(t);e.addEventListener("click",function(){a.classList.add("is-visible"),r&&r.classList.add("has-blur"),a.getAttribute("data-bokeh")||n.init(a)})}},a=document.querySelectorAll(".bokeh-link");e(a,function(e){n.showModal(e)})}();var hdr=document.querySelectorAll(".hdr");hdr.forEach(function(e){var t=e.textContent.replace(/\w/g,"<span>$&</span>");e.innerHTML=t});var hdrSpans=document.querySelectorAll(".hdr span");hdrSpans.forEach(function(e){e.addEventListener("mouseover",function(e){e.target.classList.add("spin","color"),setTimeout(function(){e.target.classList.remove("spin","color")},1e3)})});</script>
+!(function() {
+  'use strict';
+  function e(e, t, r) {
+    for (var n = 0; n < e.length; n++) t.call(r, e[n]);
+  }
+  function t(e) {
+    return document.createElement(e);
+  }
+  var r = document.querySelector('.bokeh-blur'),
+    n = {
+      init: function(e) {
+        var t,
+          r,
+          n = this;
+        e.setAttribute('data-bokeh', !0), (t = e.querySelectorAll(
+          'img',
+        )), n.createTabs(e, t), n.createCloseButton(e), (r = e.querySelectorAll(
+          '.bokeh__tabs > li',
+        )), n.setActive(r[0], t[0]);
+      },
+      createTabs: function(r, a) {
+        r.appendChild(t('ul')).className = 'bokeh__tabs';
+        var s,
+          c = r.querySelector('.bokeh__tabs', r);
+        e(a, function(e, r) {
+          (s = t('li')), c.appendChild(s), n.tabClickHandler(s, e);
+        });
+      },
+      createCloseButton: function(e) {
+        e.appendChild(t('div')).className = 'bokeh__close';
+        var n = e.querySelector('.bokeh__close', e);
+        (n.innerHTML = 'CLOSE'), n.addEventListener('click', function() {
+          e.classList.remove('is-visible'), r && r.classList.remove('has-blur');
+        });
+      },
+      tabClickHandler: function(e, t) {
+        e.addEventListener('click', function() {
+          n.setActive(e, t);
+        });
+      },
+      setActive: function(e, t) {
+        function r(e) {
+          return e.parentNode.querySelector('.is-active');
+        }
+        var n = 'is-active';
+        null !== r(e) && r(e).classList.remove(n), null !== r(t) &&
+          r(t).classList.remove(n), t.hasAttribute('data-src') &&
+          (
+            t.setAttribute('src', t.getAttribute('data-src')),
+            t.removeAttribute('data-src')
+          ), e.classList.add(n), t.classList.add(n);
+      },
+      showModal: function(e) {
+        var t = e.getAttribute('href').replace('#', ''),
+          a = document.getElementById(t);
+        e.addEventListener('click', function() {
+          a.classList.add(
+            'is-visible',
+          ), r && r.classList.add('has-blur'), a.getAttribute('data-bokeh') || n.init(a);
+        });
+      },
+    },
+    a = document.querySelectorAll('.bokeh-link');
+  e(a, function(e) {
+    n.showModal(e);
+  });
+})();
+var hdr = document.querySelectorAll('.hdr');
+hdr.forEach(function(e) {
+  var t = e.textContent.replace(/\w/g, '<span>$&</span>');
+  e.innerHTML = t;
+});
+var hdrSpans = document.querySelectorAll('.hdr span');
+hdrSpans.forEach(function(e) {
+  e.addEventListener('mouseover', function(e) {
+    e.target.classList.add('spin', 'color'), setTimeout(function() {
+      e.target.classList.remove('spin', 'color');
+    }, 1e3);
+  });
+});
+</script>

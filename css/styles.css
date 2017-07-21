@@ -40,7 +40,6 @@ html {
 body {
   margin: 0;
   color: #0a0f0d;
-  /*background-image: repeating-linear-gradient(-90deg, #f5f5f5, #f5f5f5 2px, transparent 3px, transparent 7px);*/
   background-size: 6px 8px;
   letter-spacing: -0.5px;
   overflow-x: hidden;
@@ -69,12 +68,9 @@ h3 {
 }
 
 h1 {
-  /*font-family: sans-serif;*/
   margin: 3rem 0 1rem;
   line-height: 0.9;
   font-size: 138px;
-  /*background-image: repeating-linear-gradient(-90deg, #f5f5f5, #f5f5f5 2px, transparent 3px, transparent 7px);*/
-  /*-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
   color: #66f;
 }
@@ -99,13 +95,11 @@ h1 {
 }
 
 .hdr span {
-  /*position: absolute;*/
   display: inline-block;
   transform-style: preserve-3d;
   transform-origin: 50%;
   transition-property: text-shadow, color;
   transition-duration: 1s;
-  /*text-shadow:
     0px 0px 0 #FFF,
     0px 0px 0 #FFF,
     0px 0px 0 #FFF,
@@ -121,7 +115,6 @@ h1 {
 
 .hdr span.color {
   color: #f66;
-  /*text-shadow:
     -2px -2px 2px #66F,
     -2px 0px 2px #66F,
     0px -2px 2px #66F,
@@ -308,7 +301,6 @@ section {
   text-decoration: none;
 }
 
-/* Bokeh Modal */
 
 .bokeh {
   background: rgba(255, 255, 255, 0.75);
@@ -326,7 +318,6 @@ section {
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   visibility: hidden;
-  /*-webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);*/
 }
 
