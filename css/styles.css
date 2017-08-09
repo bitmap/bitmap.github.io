@@ -24,12 +24,12 @@
 }
 
 .tiltl {
-  transform: rotate(-2deg);
+  transform: rotate(-5deg);
   white-space: nowrap;
 }
 
 .tiltr {
-  transform: rotate(2deg);
+  transform: rotate(5deg);
   white-space: nowrap;
 }
 
@@ -63,7 +63,7 @@ ul {
 h1,
 h2,
 h3 {
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.3;
 }
 
@@ -71,21 +71,21 @@ h1 {
   margin: 3rem 0 1rem;
   line-height: 0.9;
   font-size: 138px;
-  -webkit-text-fill-color: transparent;*/
   color: #66f;
+  letter-spacing: -10px;
+
 }
 
 @media screen and (max-width: 56rem) {
   h1 {
     font-size: 88px;
+    letter-spacing: -7px;
   }
 }
 @media screen and (max-width: 36rem) {
   h1 {
     font-size: 44px;
-  }
-  .work_overflow::before {
-    display: none;
+    letter-spacing: -4px;
   }
 }
 
@@ -100,12 +100,6 @@ h1 {
   transform-origin: 50%;
   transition-property: text-shadow, color;
   transition-duration: 1s;
-    0px 0px 0 #FFF,
-    0px 0px 0 #FFF,
-    0px 0px 0 #FFF,
-    0px 0px 0 #FFF,
-    0px 0px 0 #FFF,
-    0px 0px 0 #FFF;*/
 }
 
 .hdr span.spin {
@@ -115,12 +109,6 @@ h1 {
 
 .hdr span.color {
   color: #f66;
-    -2px -2px 2px #66F,
-    -2px 0px 2px #66F,
-    0px -2px 2px #66F,
-    0px 2px 2px #66F,
-    2px 0px 2px #66F,
-    2px 2px 2px #66F;*/
 }
 
 .mb1 {
@@ -179,13 +167,6 @@ section {
 
 .work {
   background: #fff;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    #f5f5f5,
-    #f5f5f5 2px,
-    transparent 3px,
-    transparent 7px
-  );
   background-size: 6px 8px;
   padding: 2rem;
   margin-left: -2rem;
@@ -195,58 +176,6 @@ section {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   position: relative;
-  animation: bgMover 1s linear infinite;
-}
-
-.work_overflow {
-  overflow: hidden;
-}
-
-.work_overflow::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  );
-  width: 200px;
-  display: none;
-}
-.work_overflow::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0)
-  );
-  width: 100px;
-  z-index: 100;
-  display: none;
-}
-
-.tiltl.work_overflow::after {
-  transform: rotate(2deg);
-  right: -2rem;
-}
-.tiltr.work_overflow::after {
-  transform: rotate(-2deg);
-  right: -2rem;
-}
-.tiltl.work_overflow::before {
-  transform: rotate(2deg);
-  left: -2rem;
-}
-.tiltr.work_overflow::before {
-  transform: rotate(-2deg);
-  left: -2rem;
 }
 
 .work_item {
@@ -259,7 +188,6 @@ section {
   transform: scale(1);
   transition: 200ms ease;
   text-decoration: none;
-  mix-blend-mode: luminosity;
 }
 
 .work_item p {
@@ -269,6 +197,7 @@ section {
 }
 
 .work_item h3 {
+  font-size: 1.5rem;
   margin: 1rem 0;
   color: black;
 }
