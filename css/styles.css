@@ -24,12 +24,12 @@
 }
 
 .tiltl {
-  transform: rotate(-5deg);
+  transform: rotate(-2deg);
   white-space: nowrap;
 }
 
 .tiltr {
-  transform: rotate(5deg);
+  transform: rotate(2deg);
   white-space: nowrap;
 }
 
