@@ -55,25 +55,25 @@ h3 {
 }
 
 h1 {
-  margin: 3rem 0 3rem;
+  margin: 0;
   line-height: 1;
   font-size: 6rem;
   color: var(--blk);
 }
 
-@media screen and (max-width: 56rem) {
+@media screen and (max-width: 60rem) {
   h1 {
     font-size: 4rem;
   }
 }
-@media screen and (max-width: 36rem) {
+@media screen and (max-width: 40rem) {
   h1 {
     font-size: 2rem;
   }
 }
 
 h2 {
-  margin: 2rem 0 1rem;
+  margin: 0 0 1rem;
   font-size: 1.5rem;
   display: block;
   line-height: 1;
@@ -124,15 +124,14 @@ img {
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-header,
 section {
-  margin: auto;
-  width: 100%;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
 }
 
 header {
   background: var(--grn);
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .hdr {
