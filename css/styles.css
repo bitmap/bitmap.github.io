@@ -175,10 +175,19 @@ header {
   padding: 2rem;
   margin: 0 -2rem;
   display: flex;
+  flex-flow: row;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   position: relative;
+}
+
+@media screen and (max-width: 36rem) {
+  .work {
+    flex-flow: row wrap;
+    padding: 1rem;
+    margin: 0 -2rem;
+  }
 }
 
 .work::-webkit-scrollbar {
@@ -197,7 +206,6 @@ header {
 
 .work_item {
   flex: 1;
-  flex-flow: row;
   min-width: 18rem;
   max-width: 18rem;
   padding: 0 1rem;
@@ -209,10 +217,15 @@ header {
 
 @media screen and (max-width: 36rem) {
   .work_item {
-    min-width: 90vw;
-    max-width: 90vw;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    margin-bottom: 3rem;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0;
   }
 }
+
 
 .work_item h3 {
   margin: 1rem 0;
