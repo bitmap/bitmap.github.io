@@ -12,6 +12,15 @@
   }
 }
 
+@keyframes chill {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 :root {
   -webkit-tap-highlight-color: transparent;
   --blk: #001011;
@@ -19,15 +28,12 @@
   --blu: #0075ff;
   --red: #ff2ecc;
   --spd: 250ms;
+  font: 400 21px/1.38 'Pinopolis', monospace;
 }
 
 * {
   box-sizing: border-box;
   text-align: center;
-}
-
-:root {
-  font: 400 21px/1.38 'Pinopolis', monospace;
 }
 
 body {
@@ -169,6 +175,12 @@ header {
 
 .tiltr {
   transform: rotate(15deg);
+}
+
+.chill {
+  display: inline-block;
+  animation: chill 2s linear infinite;
+  transform-origin: 50%;
 }
 
 .work {
