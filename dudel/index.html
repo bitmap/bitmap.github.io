@@ -47,9 +47,14 @@
       line-height: 1;
     }
 
-    button:active {
+    button:active,
+    button.active {
       background: white;
       color: black;
+    }
+
+    button[disabled] {
+      opacity: 0.2;
     }
 
     a {
@@ -87,7 +92,9 @@
 <body>
   <div id="controls">
     <button id="clear">Clear</Button>
-    <button id="eraser">Erase</Button>
+    <button id="eraser">Eraser</Button>
+    <button id="replay">Replay</Button>
+    <button id="loop">Loop</Button>
     <div class="byline">Dudel by <a href="http://cabe.io" target="_blank">Cabe</a></div>
   </div>
   <div id="gamepadDisplay"></div>
