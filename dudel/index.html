@@ -33,6 +33,7 @@
       top: 0;
       padding: 0.5rem;
       width: 100%;
+      user-select: none;
     }
 
     button {
@@ -82,8 +83,9 @@
     }
 
     .byline {
-      padding: 0.5rem 1rem;
-      float: right;
+      position: fixed;
+      bottom: 0.5rem;
+      right: 1rem;
     }
 
   </style>
@@ -98,7 +100,7 @@
     <div class="byline">Dudel by <a href="http://cabe.io" target="_blank">Cabe</a></div>
   </div>
   <div id="gamepadDisplay"></div>
-  <div id="doodleCanvas"></div>
+  <canvas id="doodleCanvas"></canvas>
   <script src="./dist/bundle.js"></script>
   <script type="text/jscript">
     const body = document.body
